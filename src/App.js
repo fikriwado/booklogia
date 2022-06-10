@@ -1,19 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Alert } from 'react-bootstrap';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Forum from './pages/Forum';
 
 function App() {
 	return (
 		<div className="App">
-			<Container className="mt-5">
-				<Row>
-					<Col>
-						<Alert variant="success">
-							Setup React-Bootstrap!
-						</Alert>
-					</Col>
-				</Row>
-			</Container>
-		</div>
+            <Router>
+                <Navbar />
+                <Switch>
+					<Route exact path="/" component={Home} />
+					<Route path="/about" component={About} />
+					<Route path="/forum" component={Forum} />
+                </Switch>
+            </Router>
+        </div>
 	);
 }
 
