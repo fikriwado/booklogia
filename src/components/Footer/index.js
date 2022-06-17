@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import logo from "../Assets/Images/BookLogia.png";
+import logo from "../../assets/Images/BookLogia.png";
 
 function Footer() {
 	return (
@@ -18,16 +18,16 @@ function Footer() {
 						<h5 className="text-uppercase mb-4 font-weight-bold">Popular</h5>
 						<ul className="list-unstyled">
 							<li className="mb-3">
-								<a href="#" className="text-light text-decoration-none">Becoming by Michelle Obama</a>
+								<a href="/#" className="text-light text-decoration-none">Becoming by Michelle Obama</a>
 							</li>
 							<li className="mb-3">
-								<a href="#" className="text-light text-decoration-none">Dear Tomorrow</a>
+								<a href="/#" className="text-light text-decoration-none">Dear Tomorrow</a>
 							</li>
 							<li className="mb-3">
-								<a href="#" className="text-light text-decoration-none">Merdeka Sejak Hati</a>
+								<a href="/#" className="text-light text-decoration-none">Merdeka Sejak Hati</a>
 							</li>
 							<li className="mb-3">
-								<a href="#" className="text-light text-decoration-none">A Wrinkle in Time</a>
+								<a href="/#" className="text-light text-decoration-none">A Wrinkle in Time</a>
 							</li>
 						</ul>
 					</Col>
@@ -45,19 +45,19 @@ function Footer() {
 						<h5 className="text-uppercase mb-4 font-weight-bold">Contact</h5>
 						<ul className="list-unstyled">
 							<li className="mb-3">
-								<a href="#" className="text-light text-decoration-none">
+								<a href="/#" className="text-light text-decoration-none">
                                 	<i className="fas fa-home mr-3 text-white"></i>{" "}
 									<span>Indonesia</span>
 								</a>
 							</li>
 							<li className="mb-3">
-								<a href="#" className="text-light text-decoration-none">
+								<a href="/#" className="text-light text-decoration-none">
 									<i className="fas fa-envelope mr-3 text-white"></i>{" "}
 									<span className=" m-lg-1"> booklogia@gmail.com </span>
 								</a>
 							</li>
 							<li className="mb-3">
-								<a href="#" className="text-light text-decoration-none">
+								<a href="/#" className="text-light text-decoration-none">
 									<i className="fas fa-phone mr-3 text-white"></i>{" "}
 									<span className=" m-lg-1"> +6282131715623 </span>
 								</a>
