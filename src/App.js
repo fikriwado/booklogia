@@ -5,21 +5,23 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Forum from './pages/Forum';
+import Login from './pages/Login';
 
 function App() {
-	return (
-		<div className="App">
-            <Router>
-                <Navbar />
-                <Switch>
-					<Route exact path="/" component={Home} />
-					<Route path="/about" component={About} />
-					<Route path="/forum" component={Forum} />
-                </Switch>
-                <Footer />
-            </Router>
-        </div>
-	);
+  return (
+    <div className='App'>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/forum' component={Forum} />
+          <Route path='/login' component={Login} />
+        </Switch>
+        <Footer />
+      </Router>
+    </div>
+  );
 }
 
 export default App;
