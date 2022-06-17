@@ -6,7 +6,7 @@ import { Container, Navbar as NavbarBootstrap, Nav } from "react-bootstrap";
 function Navbar() {
   return (
     <>
-      <NavbarBootstrap bg="dark" variant="dark" expand="lg">
+      <NavbarBootstrap bg="warning" variant="light" expand="lg">
         <Container>
           <NavbarBootstrap.Brand href="/">
             <img
