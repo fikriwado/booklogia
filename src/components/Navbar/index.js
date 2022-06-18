@@ -6,7 +6,7 @@ import { Container, Navbar as NavbarBootstrap, Nav } from 'react-bootstrap';
 function Navbar() {
   return (
     <>
-      <NavbarBootstrap bg="warning" variant="light" expand="lg">
+      <NavbarBootstrap bg='warning' variant='light' expand='lg'>
         <Container>
           <NavbarBootstrap.Brand href='/'>
             <img
@@ -39,6 +39,11 @@ function Navbar() {
               <Nav.Link>
                 <Link to='/login' className='nav-link'>
                   Login
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to='/register' className='nav-link'>
+                  Register
                 </Link>
               </Nav.Link>
             </Nav>

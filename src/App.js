@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Forum from './pages/Forum';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/about' component={About} />
           <Route path='/forum' component={Forum} />
           <Route path='/login' component={Login} />
+          <Route path='/register' component={Register} />
         </Switch>
         <Footer />
       </Router>
