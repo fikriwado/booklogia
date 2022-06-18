@@ -1,6 +1,6 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import logo from '../../assets/images/BookLogia.png';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import logo from "../../assets/images/logo-1.png";
 
 function Footer() {
   return (
@@ -44,8 +44,8 @@ function Footer() {
 
           <hr className='w-100 bg-secondary d-md-none' />
 
-          <Col md={3} className='pe-xl-5 '>
-            <h5 className='text-uppercase mb-4 font-weight-bold'>About</h5>
+          <Col md={3} className="pe-xl-5">
+            <h5 className="text-uppercase mb-4 font-weight-bold">About</h5>
             <p>
               Buku sering disebut sebagai jendela dunia karena dengan membaca
               buku kita dapat mengetahui apa saja yang ada di dunia ini baik
@@ -95,7 +95,7 @@ function Footer() {
           </Col>
         </Row>
 
-        <hr className='my-3 bg-secondary ' />
+        <hr className="my-3 bg-secondary" />
 
         <Row className='align-items-center'>
           <Col md={6} className='text-center text-md-start'>

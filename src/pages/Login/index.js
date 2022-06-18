@@ -6,7 +6,12 @@ function Login() {
     <Container className='py-3'>
       <Row>
         <Col md={6} className='mx-auto'>
-          <h1 style={{ fontFamily: "'Montserrat', sans-serif" }}>Login</h1>
+          <h1 style={{ fontFamily: "'Montserrat', sans-serif, 500" }}>
+            Lets Join Us and
+          </h1>
+          <h1 style={{ fontFamily: "'Montserrat', sans-serif" }}>
+            Make Your Own Reading Buddy
+          </h1>
           <form>
             <div className='form-group'>
               <label htmlFor='exampleInputEmail1'>Email address</label>

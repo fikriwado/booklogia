@@ -1,41 +1,5 @@
-/*---- Footer ---- */
-.subscribe {
-  position: relative;
-}
-
-.btn-submits {
-  background: #614ad3 !important;
-  height: 40px;
-  border-radius: 8px;
-  padding-left: 30px;
-  padding-right: 30px;
-  color: #fff;
-  font-weight: bold;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
-}
-
-.form-control {
-  background-color: lighten(#ccc, 10%);
-  box-shadow: none;
-  border-radius: 8px;
-  height: 50px;
-  padding-left: 30px;
-  padding-right: 130px;
-  border: none;
-  color: #343a40;
-}
-
-@media only screen and (max-width: 768px) {
-  .sub-footer {
-    font-family: "Poppins", sans-serif;
-    color: #fff;
-    font-size: 100%;
-  }
-
-  .icon-media-footer {
-    font-size: 100%;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
