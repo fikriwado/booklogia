@@ -19,8 +19,5 @@
 .img-fluid {
   width: 100%;
   height: auto;
-  margin-left: 15%;
-}
-
-.sign-option {
+  /* margin-left: 15%; */
 }

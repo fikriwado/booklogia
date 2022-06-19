@@ -19,10 +19,26 @@
 .img-fluid {
   width: 100%;
   height: auto;
-  margin-left: 15%;
+  /* margin-left: 15%; */
 }
 
 p {
-  margin-top: 20px;
+  margin-top: 15px;
   font-weight: 600;
 }
+
+/*untuk layar device berukuran kecil*/
+/* @media screen and (min-width: 450px) {
+  .img-fluid {
+    width: 100%;
+    height: auto;
+  }
+} */
+
+/*untuk layar device berukuran sedang*/
+/* @media screen and (min-width: 550px) {
+  .img-fluid {
+    width: 100%;
+    height: auto;
+  }
+} */
