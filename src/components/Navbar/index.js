@@ -1,39 +1,49 @@
-import React from "react";
-import logo from "../../logo.svg";
-import { Link } from "react-router-dom";
-import { Container, Navbar as NavbarBootstrap, Nav } from "react-bootstrap";
+import React from 'react';
+import logo from '../../logo.svg';
+import { Link } from 'react-router-dom';
+import { Container, Navbar as NavbarBootstrap, Nav } from 'react-bootstrap';
 
 function Navbar() {
   return (
     <>
-      <NavbarBootstrap bg="warning" variant="light" expand="lg">
+      <NavbarBootstrap bg='warning' variant='light' expand='lg'>
         <Container>
-          <NavbarBootstrap.Brand href="/">
+          <NavbarBootstrap.Brand href='/'>
             <img
-              alt=""
+              alt=''
               src={logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{" "}
+              width='30'
+              height='30'
+              className='d-inline-block align-top'
+            />{' '}
             Booklogia
           </NavbarBootstrap.Brand>
-          <NavbarBootstrap.Toggle aria-controls="basic-navbar-nav" />
-          <NavbarBootstrap.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+          <NavbarBootstrap.Toggle aria-controls='basic-navbar-nav' />
+          <NavbarBootstrap.Collapse id='basic-navbar-nav'>
+            <Nav className='me-auto'>
               <Nav.Link>
-                <Link to="/" className="nav-link">
+                <Link to='/' className='nav-link'>
                   Home
                 </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/about" className="nav-link">
+                <Link to='/about' className='nav-link'>
                   About
                 </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/forum" className="nav-link">
+                <Link to='/forum' className='nav-link'>
                   Forum
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to='/login' className='nav-link'>
+                  Login
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to='/register' className='nav-link'>
+                  Register
                 </Link>
               </Nav.Link>
             </Nav>

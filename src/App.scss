@@ -1,15 +1,15 @@
 $theme-colors: (
-	"primary": #0d6efd,
-	"secondary": #6c757d,
-	"success": #14C38E,
-	"info": #0dcaf0,
-	"warning": #feca57,
-	"danger": #FF6363,
-	"light": #f8f9fa,
-	"dark": #212529
+  'primary': #0d6efd,
+  'secondary': #6c757d,
+  'success': #14c38e,
+  'info': #0dcaf0,
+  'warning': #feca57,
+  'danger': #ff6363,
+  'light': #f8f9fa,
+  'dark': #212529,
 );
 
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 /*---- Footer ---- */
 .subscribe {
@@ -43,7 +43,7 @@ $theme-colors: (
 
 @media only screen and (max-width: 768px) {
   .sub-footer {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
     font-size: 100%;
   }
