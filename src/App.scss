@@ -11,6 +11,10 @@ $theme-colors: (
 
 @import '~bootstrap/scss/bootstrap';
 
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
 /*---- Footer ---- */
 footer .subscribe {
   position: relative;

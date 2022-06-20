@@ -12,14 +12,12 @@ function Register() {
       <Row className='align-items-center'>
         <Col md={6} xl={6} className='mx-auto'>
           <h1
-            className='fw-bold'
-            style={{ fontFamily: "'Poppins', sans-serif" }}
+            className='fw-bold font-poppins'
           >
             Let's Join With Us and
           </h1>
           <h1
-            className='fw-bold'
-            style={{ fontFamily: "'Poppins', sans-serif" }}
+            className='fw-bold font-poppins'
           >
             Make Your Own Reading Buddy !
           </h1>

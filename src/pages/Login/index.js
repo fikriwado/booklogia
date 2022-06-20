@@ -11,16 +11,10 @@ function Login() {
     <Container className='py-5 my-3'>
       <Row className='align-items-center'>
         <Col md={6} xl={6} className='mx-auto'>
-          <h1
-            className='fw-bold'
-            style={{ fontFamily: "'Poppins', sans-serif" }}
-          >
+          <h1 className='fw-bold font-poppins'>
             Let's Meet Up With
           </h1>
-          <h1
-            className='fw-bold'
-            style={{ fontFamily: "'Poppins', sans-serif" }}
-          >
+          <h1 className='fw-bold font-poppins'>
             Your Reading Buddy !
           </h1>
           <form className='form-login'>
