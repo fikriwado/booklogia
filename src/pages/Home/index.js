@@ -7,19 +7,25 @@ import handsShowImage from "../../assets/images/hands-show.png";
 function Home() {
     return (
         <>
-            <section id='hero-section' className='py-5'>
-                <Container className='py-5 my-3'>
+            <section id='hero-section' className='py-lg-5'>
+                <Container className='py-5 my-lg-3'>
                     <Row className='align-items-center'>
-                        <Col xl={7}>
-                            <h1 className='mb-4 fw-bold'>Anda Butuh Buku? <br /> Booklogia Solusinya</h1>
-                            
-                            <p className='w-75 lh-lg mb-4'>Platform ulasan buku yang menjadi tempat berkumpulnya para penggemar buku yang mencari bacaan baru untuk koleksinya maupun pembaca santai yang ingin mencari bacaan diwaktu senggang mereka.</p>
+                        <Col lg={5} className='order-lg-2'>
+                            <img src={heroImage} className="img-fluid d-none d-lg-block" alt="" />
+                            <img src={heroImage} className="img-fluid w-75 d-block d-lg-none mx-auto mb-4 mb-md-5" alt="" />
+                        </Col>
+                        <Col lg={7}className='order-lg-1'>
+                            <div className='text-center text-lg-start'>
+                                <h1 className='mb-4 fw-bold'>Anda Butuh Buku? <br /> Booklogia Solusinya</h1>
+                                
+                                <p className='w-75 lh-lg mb-4 mx-auto mx-lg-0'>Platform ulasan buku yang menjadi tempat berkumpulnya para penggemar buku yang mencari bacaan baru untuk koleksinya maupun pembaca santai yang ingin mencari bacaan diwaktu senggang mereka.</p>
 
-                            <Link to="/" className="btn btn-success text-white px-4 py-2 me-2">Get Started</Link>
-                            <Link to="/" className="btn btn-danger text-white px-4 py-2">Reading</Link>
+                                <Link to="/" className="btn btn-success text-white px-4 py-2 me-2">Get Started</Link>
+                                <Link to="/" className="btn btn-danger text-white px-4 py-2">Reading</Link>
+                            </div>
                             
                             <Row className='align-items-center pt-4 mt-5'>
-                                <Col md="auto">
+                                <Col xs="auto">
                                     <img src={handsShowImage} className="img-fluid" alt="" />
                                 </Col>
                                 <Col>
@@ -27,9 +33,6 @@ function Home() {
                                     <hr className='w-25 border border-2 border-dark opacity-100 mt-4' />
                                 </Col>
                             </Row>
-                        </Col>
-                        <Col xl={5}>
-                            <img src={heroImage} className="img-fluid" alt="" />
                         </Col>
                     </Row>
                 </Container>
