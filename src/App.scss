@@ -12,11 +12,11 @@ $theme-colors: (
 @import '~bootstrap/scss/bootstrap';
 
 /*---- Footer ---- */
-.subscribe {
+footer .subscribe {
   position: relative;
 }
 
-.btn-submits {
+footer .subscribe .btn-submits {
   background: #614ad3 !important;
   height: 40px;
   border-radius: 8px;
@@ -30,25 +30,26 @@ $theme-colors: (
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
 }
 
-.form-control {
+footer .subscribe .form-control {
   background-color: lighten(#ccc, 10%);
   box-shadow: none;
   border-radius: 8px;
   height: 50px;
-  padding-left: 30px;
+  padding-left: 14px;
   padding-right: 130px;
   border: none;
   color: #343a40;
 }
 
 @media only screen and (max-width: 768px) {
-  .sub-footer {
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
+  footer .icon-media-footer {
     font-size: 100%;
   }
+}
 
-  .icon-media-footer {
-    font-size: 100%;
-  }
+.form-login .form-control {
+  border: #14c38e solid 3px;
+  width: 85%;
+  height: 50%;
+  border-radius: 10px;
 }

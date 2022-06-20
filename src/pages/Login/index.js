@@ -5,7 +5,6 @@ import icongoogle from '../../assets/images/Google Icon.svg';
 import iconfb from '../../assets/images/Facebook Icon.svg';
 import icongithub from '../../assets/images/Github Icon.svg';
 import { Link } from 'react-router-dom';
-import './App.css';
 
 function Login() {
   return (
@@ -27,7 +26,7 @@ function Login() {
           <form className='form-login'>
             <div className='form-group'>
               <label className='fw-semibold' htmlFor='exampleInputEmail1'>
-                Email <span style={{ color: 'red' }}>*</span>{' '}
+                Email <span className='text-danger'>*</span>{' '}
               </label>
               <input
                 type='email'
@@ -39,8 +38,7 @@ function Login() {
 
             <div className='form-group my-4'>
               <label className='fw-semibold' htmlFor='exampleInputPassword1'>
-                Password
-                <span style={{ color: 'red' }}>*</span>
+                Password <span className='text-danger'>*</span>
               </label>
               <input
                 type='password'
@@ -48,7 +46,7 @@ function Login() {
                 id='exampleInputPassword1'
               />
             </div>
-            <Link to='/' className='btn btn-login px-4 py-2'>
+            <Link to='/' className='btn btn-danger text-white px-4 py-2'>
               SIGN IN
             </Link>
           </form>

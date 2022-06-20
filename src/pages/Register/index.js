@@ -5,7 +5,6 @@ import icongoogle from '../../assets/images/Google Icon.svg';
 import iconfb from '../../assets/images/Facebook Icon.svg';
 import icongithub from '../../assets/images/Github Icon.svg';
 import { Link } from 'react-router-dom';
-import './App.css';
 
 function Register() {
   return (
@@ -27,7 +26,7 @@ function Register() {
           <form className='form-login'>
             <div className='form-group'>
               <label className='fw-semibold' htmlFor='exampleInputEmail1'>
-                Username <span style={{ color: 'red' }}>*</span>{' '}
+                Username <span className='text-danger'>*</span>{' '}
               </label>
               <input
                 type='email'
@@ -39,7 +38,7 @@ function Register() {
 
             <div className='form-group  my-4'>
               <label className='fw-semibold' htmlFor='exampleInputEmail1'>
-                Email <span style={{ color: 'red' }}>*</span>{' '}
+                Email <span className='text-danger'>*</span>{' '}
               </label>
               <input
                 type='email'
@@ -51,8 +50,7 @@ function Register() {
 
             <div className='form-group my-4'>
               <label className='fw-semibold' htmlFor='exampleInputPassword1'>
-                Password
-                <span style={{ color: 'red' }}>*</span>
+                Password <span className='text-danger'>*</span>
               </label>
               <input
                 type='password'
@@ -60,10 +58,10 @@ function Register() {
                 id='exampleInputPassword1'
               />
             </div>
-            <Link to='/' className='btn btn-login px-4 py-2'>
+            <Link to='/' className='btn btn-danger text-white px-4 py-2'>
               SIGN UP
             </Link>
-            <p>
+            <p className='mt-3 fw-semibold'>
               By signing up for BOOKLOGIA you agree to BOOKLOGIA’s <br></br>
               Term’s of Service & Privacy Policy
             </p>
