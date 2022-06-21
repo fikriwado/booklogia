@@ -6,11 +6,12 @@ import aboutImage from '../../assets/images/about.png';
 import aboutPhotosImage from '../../assets/images/about-photos.png';
 import handsShowImage from '../../assets/images/hands-show.png';
 import popularReview1 from '../../assets/images/popular-review/1.png';
+import profileRating1 from '../../assets/images/rating-section/1.png';
 
 function Home() {
     return (
         <div className='home-page'>
-            <section id='hero-section' className='py-lg-5'>
+            <section id='hero-section' className='py-3 py-lg-5'>
                 <Container className='py-5 my-lg-3'>
                     <Row className='align-items-center'>
                         <Col lg={5} className='order-lg-2'>
@@ -41,7 +42,7 @@ function Home() {
                 </Container>
             </section>
             
-            <section id='about-section' className='py-lg-5'>
+            <section id='about-section' className='py-3 py-lg-5'>
                 <Container className='py-lg-3'>
                     <Row className='align-items-center'>
                         <Col lg={5}>
@@ -65,7 +66,7 @@ function Home() {
                 </Container>
             </section>
             
-            <section id='popular-review-section' className='py-lg-5'>
+            <section id='popular-review-section' className='py-3 py-lg-5'>
                 <Container className='py-lg-3 text-center'>
                     <Row className='mb-lg-4'>
                         <Col>
@@ -79,7 +80,7 @@ function Home() {
                             <Tabs variant='pills' defaultActiveKey="news" className="d-inline-flex p-3 mb-3 tab-pills-booklogia mb-lg-5">
                                 <Tab eventKey="news" title="News" className='text-start'>
                                     <Row>
-                                        <Col>
+                                        <Col lg={4} className='mb-3 mb-lg-0'>
                                             <Card className='rounded-0 bg-light border-light h-100'>
                                                 <Card.Img className='rounded-0' variant="top" src={popularReview1} />
                                                 <Card.Body>
@@ -87,7 +88,7 @@ function Home() {
                                                 </Card.Body>
                                             </Card>
                                         </Col>
-                                        <Col>
+                                        <Col lg={4} className='mb-3 mb-lg-0'>
                                             <Card className='rounded-0 bg-light border-light h-100'>
                                                 <Card.Img className='rounded-0' variant="top" src={popularReview1} />
                                                 <Card.Body>
@@ -95,7 +96,7 @@ function Home() {
                                                 </Card.Body>
                                             </Card>
                                         </Col>
-                                        <Col>
+                                        <Col lg={4} className='mb-3 mb-lg-0'>
                                             <Card className='rounded-0 bg-light border-light h-100'>
                                                 <Card.Img className='rounded-0' variant="top" src={popularReview1} />
                                                 <Card.Body>
@@ -112,6 +113,77 @@ function Home() {
                                     xzcdsas
                                 </Tab>
                             </Tabs>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            
+            <section id='rating-section' className='py-3 py-lg-5'>
+                <Container className='py-lg-3 text-center'>
+                    <Row className='mb-lg-4'>
+                        <Col>
+                            <h1 className='mb-3 fw-bold'>Bacaan Populer</h1>
+                            <p>Berbagai bacaan yang sedang ramai dibaca dapat kamu akses disini.</p>
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col lg={4} className='mb-3 mb-lg-0'>
+                            <Card className='rounded-0 bg-light border-light h-100 py-3'>
+                                <Card.Body>
+                                    <img src={profileRating1} className='img-fluid mb-3' alt='' />
+
+                                    <Card.Text className='fw-bold mb-2'>Cristiano Ronaldo</Card.Text>
+                                    
+                                    <div className='mb-2'>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                    </div>
+
+                                    <Card.Text>Web ini sungguh menarik, aku bisa tahu buku-buku menarik setelah mengetahui ulasan dari para pengguna lain dan web ini sangat bermanfaat.</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col lg={4} className='mb-3 mb-lg-0'>
+                        <Card className='rounded-0 bg-light border-light h-100 py-3'>
+                                <Card.Body>
+                                    <img src={profileRating1} className='img-fluid mb-3' alt='' />
+
+                                    <Card.Text className='fw-bold mb-2'>Cristiano Ronaldo</Card.Text>
+                                    
+                                    <div className='mb-2'>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                    </div>
+
+                                    <Card.Text>Web ini sungguh menarik, aku bisa tahu buku-buku menarik setelah mengetahui ulasan dari para pengguna lain dan web ini sangat bermanfaat.</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col lg={4} className='mb-3 mb-lg-0'>
+                        <Card className='rounded-0 bg-light border-light h-100 py-3'>
+                                <Card.Body>
+                                    <img src={profileRating1} className='img-fluid mb-3' alt='' />
+
+                                    <Card.Text className='fw-bold mb-2'>Cristiano Ronaldo</Card.Text>
+                                    
+                                    <div className='mb-2'>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                        <i className='fas fa-star text-warning'></i>
+                                    </div>
+
+                                    <Card.Text>Web ini sungguh menarik, aku bisa tahu buku-buku menarik setelah mengetahui ulasan dari para pengguna lain dan web ini sangat bermanfaat.</Card.Text>
+                                </Card.Body>
+                            </Card>
                         </Col>
                     </Row>
                 </Container>
