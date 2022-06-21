@@ -1,0 +1,26 @@
+.home-page .tab-pills-booklogia {
+    background-color: #FFEBAD;
+    
+    &.nav-pills .nav-item {
+        margin: 0 6px;
+        
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .nav-link {
+            color: $white;
+            background-color: #F4A641;
+            border-radius: 0;
+            min-width: 100px;
+
+            &.active {
+                background-color: #FB9108;
+            }
+        }
+    }
+}

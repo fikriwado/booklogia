@@ -6,7 +6,7 @@ import { Container, Navbar as NavbarBootstrap, Nav } from 'react-bootstrap';
 function Navbar() {
   return (
     <>
-      <NavbarBootstrap bg='warning' variant='light' expand='lg'>
+      <NavbarBootstrap bg='warning' variant='light' expand='lg' className='py-3'>
         <Container>
           <NavbarBootstrap.Brand href='/'>
             <img
@@ -21,31 +21,21 @@ function Navbar() {
           <NavbarBootstrap.Toggle aria-controls='basic-navbar-nav' />
           <NavbarBootstrap.Collapse id='basic-navbar-nav'>
             <Nav className='me-auto'>
-              <Nav.Link>
-                <Link to='/' className='nav-link'>
+                <Link to='/' className='nav-link ms-2 me-3'>
                   Home
                 </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link to='/about' className='nav-link'>
+                <Link to='/about' className='nav-link me-3'>
                   About
                 </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link to='/forum' className='nav-link'>
+                <Link to='/forum' className='nav-link me-3'>
                   Forum
                 </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link to='/login' className='nav-link'>
+                <Link to='/login' className='nav-link me-3'>
                   Login
                 </Link>
-              </Nav.Link>
-              <Nav.Link>
                 <Link to='/register' className='nav-link'>
                   Register
                 </Link>
-              </Nav.Link>
             </Nav>
           </NavbarBootstrap.Collapse>
         </Container>
