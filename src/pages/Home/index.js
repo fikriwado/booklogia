@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Tabs, Tab } from 'react-bootstrap';
+import { Container, Row, Col, Tabs, Tab, Card } from 'react-bootstrap';
 import heroImage from '../../assets/images/hero.png';
 import aboutImage from '../../assets/images/about.png';
 import aboutPhotosImage from '../../assets/images/about-photos.png';
 import handsShowImage from '../../assets/images/hands-show.png';
+import popularReview1 from '../../assets/images/popular-review/1.png';
 
 function Home() {
     return (
@@ -66,17 +67,53 @@ function Home() {
             
             <section id='popular-review-section' className='py-lg-5'>
                 <Container className='py-lg-3 text-center'>
-                    <Tabs variant='pills' defaultActiveKey="news" className="d-inline-flex p-3 mb-3 tab-pills-booklogia">
-                        <Tab eventKey="news" title="News" className='text-start'>
-                            jkasndjksa
-                        </Tab>
-                        <Tab eventKey="popular" title="Popular" className='text-start'>
-                            sadsad
-                        </Tab>
-                        <Tab eventKey="old" title="Old" className='text-start'>
-                            xzcdsas
-                        </Tab>
-                    </Tabs>
+                    <Row className='mb-lg-4'>
+                        <Col>
+                            <h1 className='mb-3 fw-bold'>Bacaan Populer</h1>
+                            <p>Berbagai bacaan yang sedang ramai dibaca dapat kamu akses disini.</p>
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col>
+                            <Tabs variant='pills' defaultActiveKey="news" className="d-inline-flex p-3 mb-3 tab-pills-booklogia mb-lg-5">
+                                <Tab eventKey="news" title="News" className='text-start'>
+                                    <Row>
+                                        <Col>
+                                            <Card className='rounded-0 bg-light border-light h-100'>
+                                                <Card.Img className='rounded-0' variant="top" src={popularReview1} />
+                                                <Card.Body>
+                                                    <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>6 Tips membaca buku</Card.Title>
+                                                </Card.Body>
+                                            </Card>
+                                        </Col>
+                                        <Col>
+                                            <Card className='rounded-0 bg-light border-light h-100'>
+                                                <Card.Img className='rounded-0' variant="top" src={popularReview1} />
+                                                <Card.Body>
+                                                    <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Ingin memulai membaca buku, lakukan hal berikut!</Card.Title>
+                                                </Card.Body>
+                                            </Card>
+                                        </Col>
+                                        <Col>
+                                            <Card className='rounded-0 bg-light border-light h-100'>
+                                                <Card.Img className='rounded-0' variant="top" src={popularReview1} />
+                                                <Card.Body>
+                                                    <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                                </Card.Body>
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                </Tab>
+                                <Tab eventKey="popular" title="Popular" className='text-start'>
+                                    sadsad
+                                </Tab>
+                                <Tab eventKey="old" title="Old" className='text-start'>
+                                    xzcdsas
+                                </Tab>
+                            </Tabs>
+                        </Col>
+                    </Row>
                 </Container>
             </section>
         </div>
