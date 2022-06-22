@@ -1,0 +1,43 @@
+.banner-blog-parent {
+  background: url(../../assets/images/Forum/Artboard.png);
+  width: 100%;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.search {
+  width: 100%;
+  height: 50px;
+  background-color: #f4f5f7;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 75%;
+  height: 50px;
+
+  background-color: #f4f5f7;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.button-search {
+  background-color: #61a1da !important;
+  border: none;
+  width: 22%;
+}
+
+.add {
+  margin-left: 5px;
+}
+
+.img-round {
+  border-radius: 6%;
+}
