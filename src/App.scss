@@ -4,6 +4,27 @@
 @import './sass/pages/home.scss';
 @import './sass/components/footer';
 
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-prev:before,
+.slick-next:before {
+	color: $secondary;
+}
+
+.slick-track {
+	display: flex !important;
+}
+
+.slick-slide {
+	padding: 0 12px;
+	height: auto !important;
+
+	div {
+		height: 100%;
+	}
+}
+
 .font-poppins {
   font-family: 'Poppins', sans-serif;
 }
