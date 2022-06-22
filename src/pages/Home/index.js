@@ -13,8 +13,8 @@ import profileRating3 from '../../assets/images/rating-section/3.png';
 function Home() {
     return (
         <div className='home-page'>
-            <section id='hero-section' className='py-3 py-lg-5'>
-                <Container className='py-5 my-lg-3'>
+            <section id='hero-section' className='py-5 py-lg-5'>
+                <Container className='mt-lg-5'>
                     <Row className='align-items-center'>
                         <Col lg={5} className='order-lg-2'>
                             <img src={heroImage} className='img-fluid d-none d-lg-block' alt='' />
@@ -30,7 +30,7 @@ function Home() {
                                 <Link to='/' className='btn btn-danger text-white px-4 py-2'>Reading</Link>
                             </div>
                             
-                            <Row className='justify-content-center justify-content-lg-start align-items-center pt-4 mt-5'>
+                            <Row className='justify-content-center justify-content-lg-start align-items-center pt-4 mt-3 mt-lg-5'>
                                 <Col xs='auto'>
                                     <img src={handsShowImage} className='img-fluid' alt='' />
                                 </Col>
@@ -44,7 +44,7 @@ function Home() {
                 </Container>
             </section>
             
-            <section id='about-section' className='py-3 py-lg-5'>
+            <section id='about-section' className='py-4 py-lg-5'>
                 <Container className='py-lg-3'>
                     <Row className='align-items-center'>
                         <Col lg={5}>
@@ -68,7 +68,7 @@ function Home() {
                 </Container>
             </section>
             
-            <section id='popular-review-section' className='py-3 py-lg-5'>
+            <section id='popular-review-section' className='py-4 py-lg-5'>
                 <Container className='py-lg-3 text-center'>
                     <Row className='mb-lg-4'>
                         <Col>
@@ -79,7 +79,7 @@ function Home() {
 
                     <Row>
                         <Col>
-                            <Tabs variant='pills' defaultActiveKey="news" className="d-inline-flex p-3 mb-3 tab-pills-booklogia mb-lg-5">
+                            <Tabs variant='pills' defaultActiveKey="news" className="d-inline-flex p-3 mb-4 mb-lg-5 tab-pills-booklogia">
                                 <Tab eventKey="news" title="News" className='text-start'>
                                     <Row>
                                         <Col lg={4} className='mb-3 mb-lg-0'>
@@ -120,12 +120,12 @@ function Home() {
                 </Container>
             </section>
             
-            <section id='rating-section' className='py-3 py-lg-5'>
-                <Container className='py-lg-3 text-center'>
+            <section id='rating-section' className='py-4 py-lg-5'>
+                <Container className='pt-lg-3 pb-lg-5 text-center'>
                     <Row className='mb-lg-4'>
                         <Col>
-                            <h1 className='mb-3 fw-bold'>Bacaan Populer</h1>
-                            <p>Berbagai bacaan yang sedang ramai dibaca dapat kamu akses disini.</p>
+                            <h1 className='mb-3 fw-bold'>Tanggapan Pembaca</h1>
+                            <p>Masih ragu untuk bergabung ? <br /> Berikut tanggapan orang-orang yang sudah bergabung di Booklogia :</p>
                         </Col>
                     </Row>
 
