@@ -7,6 +7,8 @@ import aboutPhotosImage from '../../assets/images/about-photos.png';
 import handsShowImage from '../../assets/images/hands-show.png';
 import popularReview1 from '../../assets/images/popular-review/1.png';
 import profileRating1 from '../../assets/images/rating-section/1.png';
+import profileRating2 from '../../assets/images/rating-section/2.png';
+import profileRating3 from '../../assets/images/rating-section/3.png';
 
 function Home() {
     return (
@@ -148,11 +150,11 @@ function Home() {
                             </Card>
                         </Col>
                         <Col lg={4} className='mb-3 mb-lg-0'>
-                        <Card className='rounded-0 bg-light border-light h-100 py-3'>
+                            <Card className='rounded-0 bg-light border-light h-100 py-3'>
                                 <Card.Body>
-                                    <img src={profileRating1} className='img-fluid mb-3' alt='' />
+                                    <img src={profileRating2} className='img-fluid mb-3' alt='' />
 
-                                    <Card.Text className='fw-bold mb-2'>Cristiano Ronaldo</Card.Text>
+                                    <Card.Text className='fw-bold mb-2'>Ainsley Amanda</Card.Text>
                                     
                                     <div className='mb-2'>
                                         <i className='fas fa-star text-warning'></i>
@@ -162,16 +164,16 @@ function Home() {
                                         <i className='fas fa-star text-warning'></i>
                                     </div>
 
-                                    <Card.Text>Web ini sungguh menarik, aku bisa tahu buku-buku menarik setelah mengetahui ulasan dari para pengguna lain dan web ini sangat bermanfaat.</Card.Text>
+                                    <Card.Text>Aku sangat suka novel romance yang happy ending, ulasan orang-orang sangat membantuku mencari novel yang aku suka.</Card.Text>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col lg={4} className='mb-3 mb-lg-0'>
-                        <Card className='rounded-0 bg-light border-light h-100 py-3'>
+                            <Card className='rounded-0 bg-light border-light h-100 py-3'>
                                 <Card.Body>
-                                    <img src={profileRating1} className='img-fluid mb-3' alt='' />
+                                    <img src={profileRating3} className='img-fluid mb-3' alt='' />
 
-                                    <Card.Text className='fw-bold mb-2'>Cristiano Ronaldo</Card.Text>
+                                    <Card.Text className='fw-bold mb-2'>Agatha Yuda</Card.Text>
                                     
                                     <div className='mb-2'>
                                         <i className='fas fa-star text-warning'></i>
@@ -181,7 +183,7 @@ function Home() {
                                         <i className='fas fa-star text-warning'></i>
                                     </div>
 
-                                    <Card.Text>Web ini sungguh menarik, aku bisa tahu buku-buku menarik setelah mengetahui ulasan dari para pengguna lain dan web ini sangat bermanfaat.</Card.Text>
+                                    <Card.Text>Orang-orang disini sangat supportive, mereka dengans enang hati memberikan rekomendasi buku yang menarik.</Card.Text>
                                 </Card.Body>
                             </Card>
                         </Col>
