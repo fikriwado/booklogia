@@ -6,11 +6,45 @@ import aboutImage from '../../assets/images/about.png';
 import aboutPhotosImage from '../../assets/images/about-photos.png';
 import handsShowImage from '../../assets/images/hands-show.png';
 import popularReview1 from '../../assets/images/popular-review/1.png';
+import popularReview2 from '../../assets/images/popular-review/2.png';
+import popularReview3 from '../../assets/images/popular-review/3.png';
 import profileRating1 from '../../assets/images/rating-section/1.png';
 import profileRating2 from '../../assets/images/rating-section/2.png';
 import profileRating3 from '../../assets/images/rating-section/3.png';
+import Slider from "react-slick";
 
 function Home() {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+          ]
+    };
+
     return (
         <div className='home-page'>
             <section id='hero-section' className='py-5 py-lg-5'>
@@ -78,41 +112,144 @@ function Home() {
                     </Row>
 
                     <Row>
-                        <Col>
+                        <Col className='px-0'>
                             <Tabs variant='pills' defaultActiveKey="news" className="d-inline-flex p-3 mb-4 mb-lg-5 tab-pills-booklogia">
                                 <Tab eventKey="news" title="News" className='text-start'>
-                                    <Row>
-                                        <Col lg={4} className='mb-3 mb-lg-0'>
-                                            <Card className='rounded-0 bg-light border-light h-100'>
-                                                <Card.Img className='rounded-0' variant="top" src={popularReview1} />
-                                                <Card.Body>
-                                                    <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>6 Tips membaca buku</Card.Title>
-                                                </Card.Body>
-                                            </Card>
-                                        </Col>
-                                        <Col lg={4} className='mb-3 mb-lg-0'>
-                                            <Card className='rounded-0 bg-light border-light h-100'>
-                                                <Card.Img className='rounded-0' variant="top" src={popularReview1} />
-                                                <Card.Body>
-                                                    <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Ingin memulai membaca buku, lakukan hal berikut!</Card.Title>
-                                                </Card.Body>
-                                            </Card>
-                                        </Col>
-                                        <Col lg={4} className='mb-3 mb-lg-0'>
-                                            <Card className='rounded-0 bg-light border-light h-100'>
-                                                <Card.Img className='rounded-0' variant="top" src={popularReview1} />
-                                                <Card.Body>
-                                                    <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
-                                                </Card.Body>
-                                            </Card>
-                                        </Col>
-                                    </Row>
+                                    <Slider {...settings}>
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview1} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>6 Tips membaca buku</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview2} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Ingin memulai membaca buku, lakukan hal berikut!</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview3} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview2} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview3} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview1} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                    </Slider>
                                 </Tab>
+
                                 <Tab eventKey="popular" title="Popular" className='text-start'>
-                                    sadsad
+                                    <Slider {...settings}>
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview3} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview1} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>6 Tips membaca buku</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview2} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Ingin memulai membaca buku, lakukan hal berikut!</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview2} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview3} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview1} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                    </Slider>
                                 </Tab>
+
                                 <Tab eventKey="old" title="Old" className='text-start'>
-                                    xzcdsas
+                                    <Slider {...settings}>
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview2} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Ingin memulai membaca buku, lakukan hal berikut!</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview1} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>6 Tips membaca buku</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview3} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview2} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview3} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                        
+                                        <Card className='rounded-0 bg-light border-light h-100'>
+                                            <Card.Img className='rounded-0' variant="top" src={popularReview1} />
+                                            <Card.Body>
+                                                <Card.Title className='text-capitalize' style={{ lineHeight: 1.6 }}>Buku bacaan ringan bagi sang pemula</Card.Title>
+                                            </Card.Body>
+                                        </Card>
+                                    </Slider>
                                 </Tab>
                             </Tabs>
                         </Col>
