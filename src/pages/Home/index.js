@@ -15,7 +15,7 @@ import Slider from "react-slick";
 
 function Home() {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
@@ -102,7 +102,7 @@ function Home() {
                 </Container>
             </section>
             
-            <section id='popular-review-section' className='py-4 py-lg-5'>
+            <section id='popular-review-section' className='py-4 pt-lg-5'>
                 <Container className='py-lg-3 text-center'>
                     <Row className='mb-lg-4'>
                         <Col>
