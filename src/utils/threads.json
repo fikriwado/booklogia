@@ -1,0 +1,460 @@
+[
+  {
+    "id": 1,
+    "fotobuku": "../../assets/images/Forum/Desainzero.png",
+    "judul": "Marmut Merah Jambu",
+    "deskripsi": "Marmut Merah Jambu adalah buku karya Raditya Dika kelima yang diterbitkan pada tahun 2010. Masih berkonsepkan cerita komedi yang ditulis berdasarkan kisah sang penulis seperti dalam buku-buku sebelumnya. Garis besar buku ini menceritakan kisah asmara penulis mapun orang terdekatnya, termasuk saat menjalin kasih dengan penyanyi Indonesia, Sherina Munaf. Buku ini berisi 222 halaman.",
+    "like": 1.659,
+    "id_user": 1,
+    "edit": 0,
+    "delete": 0,
+    "createAt": null,
+    "editAt": null,
+    "deleteAt": null,
+    "komens": [
+      {
+        "id": 1,
+        "komentar": "Buku ini sangat menarik",
+        "id_user": 2,
+        "like": 178,
+        "edit": 0,
+        "editAt": null,
+        "delete": 0,
+        "deleteAt": null,
+        "komen_lagi": [
+          {
+            "id": 1,
+            "komentar": "Setuju dengan komentar kamu",
+            "id_user": 1,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "komentar": "terimakasih banyak",
+            "id_user": 2,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "komentar": "Buku ini sangat bagus",
+        "id_user": 3,
+        "like": 178,
+        "edit": 0,
+        "editAt": null,
+        "delete": 0,
+        "deleteAt": null,
+        "komen_lagi": [
+          {
+            "id": 1,
+            "komentar": "Setuju dengan komentar kamu",
+            "id_user": 1,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 1,
+            "komentar": "terimakasih",
+            "id_user": 3,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "fotobuku": "../../assets/images/Forum/Desainzero.png",
+    "judul": "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh",
+    "deskripsi": "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh adalah buku karya Raditya Dika yang diterbitkan pada tahun 2005. Buku ini berkonsep buku harian dan berisi 235 halaman, yang ditulis berdasarkan kejadian asli sang penulis saat ia kuliah di Adelaide, Australia. Buku ini pun sempat difilmkan pada tahun 2009 dengan bertitelkan Kambing Jantan: The Movie yang dibintangi Raditya sendiri, dan juga Herfiza Novianti.",
+    "like": 1.659,
+    "id_user": 1,
+    "edit": 0,
+    "delete": 0,
+    "createAt": null,
+    "editAt": null,
+    "deleteAt": null,
+    "komen": [
+      {
+        "id": 1,
+        "komentar": "Buku ini sangat menghibur",
+        "id_user": 2,
+        "like": 178,
+        "edit": 0,
+        "editAt": null,
+        "delete": 0,
+        "deleteAt": null,
+        "komen_lagi": [
+          {
+            "id": 1,
+            "id_komen": 1,
+            "komentar": "Benar buku ini sangat kocak",
+            "id_user": 2,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "id_komen": 1,
+            "komentar": "Benar buku ini sangat kocak",
+            "id_user": 3,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "id_komen": 1,
+            "komentar": "Terimakasih",
+            "id_user": 1,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "fotobuku": "../../assets/images/Forum/Desainzero.png",
+    "judul": "Marmut Merah Jambu",
+    "deskripsi": "Marmut Merah Jambu adalah buku karya Raditya Dika kelima yang diterbitkan pada tahun 2010. Masih berkonsepkan cerita komedi yang ditulis berdasarkan kisah sang penulis seperti dalam buku-buku sebelumnya. Garis besar buku ini menceritakan kisah asmara penulis mapun orang terdekatnya, termasuk saat menjalin kasih dengan penyanyi Indonesia, Sherina Munaf. Buku ini berisi 222 halaman.",
+    "like": 1.659,
+    "id_user": 2,
+    "edit": 0,
+    "delete": 0,
+    "createAt": null,
+    "editAt": null,
+    "deleteAt": null,
+    "komens": [
+      {
+        "id": 1,
+        "komentar": "Buku ini sangat menarik",
+        "id_user": 2,
+        "like": 178,
+        "edit": 0,
+        "editAt": null,
+        "delete": 0,
+        "deleteAt": null,
+        "komen_lagi": [
+          {
+            "id": 1,
+            "komentar": "Setuju dengan komentar kamu",
+            "id_user": 1,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "komentar": "terimakasih banyak",
+            "id_user": 2,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "komentar": "Buku ini sangat bagus",
+        "id_user": 3,
+        "like": 178,
+        "edit": 0,
+        "editAt": null,
+        "delete": 0,
+        "deleteAt": null,
+        "komen_lagi": [
+          {
+            "id": 1,
+            "komentar": "Setuju dengan komentar kamu",
+            "id_user": 1,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 1,
+            "komentar": "terimakasih",
+            "id_user": 3,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "fotobuku": "../../assets/images/Forum/Desainzero.png",
+    "judul": "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh",
+    "deskripsi": "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh adalah buku karya Raditya Dika yang diterbitkan pada tahun 2005. Buku ini berkonsep buku harian dan berisi 235 halaman, yang ditulis berdasarkan kejadian asli sang penulis saat ia kuliah di Adelaide, Australia. Buku ini pun sempat difilmkan pada tahun 2009 dengan bertitelkan Kambing Jantan: The Movie yang dibintangi Raditya sendiri, dan juga Herfiza Novianti.",
+    "like": 1.659,
+    "id_user": 3,
+    "edit": 0,
+    "delete": 0,
+    "createAt": null,
+    "editAt": null,
+    "deleteAt": null,
+    "komen": [
+      {
+        "id": 1,
+        "komentar": "Buku ini sangat menghibur",
+        "id_user": 2,
+        "like": 178,
+        "edit": 0,
+        "editAt": null,
+        "delete": 0,
+        "deleteAt": null,
+        "komen_lagi": [
+          {
+            "id": 1,
+            "id_komen": 1,
+            "komentar": "Benar buku ini sangat kocak",
+            "id_user": 2,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "id_komen": 1,
+            "komentar": "Benar buku ini sangat kocak",
+            "id_user": 3,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "id_komen": 1,
+            "komentar": "Terimakasih",
+            "id_user": 1,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "fotobuku": "../../assets/images/Forum/Desainzero.png",
+    "judul": "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh",
+    "deskripsi": "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh adalah buku karya Raditya Dika yang diterbitkan pada tahun 2005. Buku ini berkonsep buku harian dan berisi 235 halaman, yang ditulis berdasarkan kejadian asli sang penulis saat ia kuliah di Adelaide, Australia. Buku ini pun sempat difilmkan pada tahun 2009 dengan bertitelkan Kambing Jantan: The Movie yang dibintangi Raditya sendiri, dan juga Herfiza Novianti.",
+    "like": 1.659,
+    "id_user": 4,
+    "edit": 0,
+    "delete": 0,
+    "createAt": null,
+    "editAt": null,
+    "deleteAt": null,
+    "komen": [
+      {
+        "id": 1,
+        "komentar": "Buku ini sangat menghibur",
+        "id_user": 2,
+        "like": 178,
+        "edit": 0,
+        "editAt": null,
+        "delete": 0,
+        "deleteAt": null,
+        "komen_lagi": [
+          {
+            "id": 1,
+            "id_komen": 1,
+            "komentar": "Benar buku ini sangat kocak",
+            "id_user": 2,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "id_komen": 1,
+            "komentar": "Benar buku ini sangat kocak",
+            "id_user": 3,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "id_komen": 1,
+            "komentar": "Terimakasih",
+            "id_user": 1,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "fotobuku": "../../assets/images/Forum/Desainzero.png",
+    "judul": "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh",
+    "deskripsi": "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh adalah buku karya Raditya Dika yang diterbitkan pada tahun 2005. Buku ini berkonsep buku harian dan berisi 235 halaman, yang ditulis berdasarkan kejadian asli sang penulis saat ia kuliah di Adelaide, Australia. Buku ini pun sempat difilmkan pada tahun 2009 dengan bertitelkan Kambing Jantan: The Movie yang dibintangi Raditya sendiri, dan juga Herfiza Novianti.",
+    "like": 1.659,
+    "id_user": 5,
+    "edit": 0,
+    "delete": 0,
+    "createAt": null,
+    "editAt": null,
+    "deleteAt": null,
+    "komen": [
+      {
+        "id": 1,
+        "komentar": "Buku ini sangat menghibur",
+        "id_user": 2,
+        "like": 178,
+        "edit": 0,
+        "editAt": null,
+        "delete": 0,
+        "deleteAt": null,
+        "komen_lagi": [
+          {
+            "id": 1,
+            "id_komen": 1,
+            "komentar": "Benar buku ini sangat kocak",
+            "id_user": 2,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "id_komen": 1,
+            "komentar": "Benar buku ini sangat kocak",
+            "id_user": 3,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "id_komen": 1,
+            "komentar": "Terimakasih",
+            "id_user": 1,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "fotobuku": "../../assets/images/Forum/Desainzero.png",
+    "judul": "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh",
+    "deskripsi": "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh adalah buku karya Raditya Dika yang diterbitkan pada tahun 2005. Buku ini berkonsep buku harian dan berisi 235 halaman, yang ditulis berdasarkan kejadian asli sang penulis saat ia kuliah di Adelaide, Australia. Buku ini pun sempat difilmkan pada tahun 2009 dengan bertitelkan Kambing Jantan: The Movie yang dibintangi Raditya sendiri, dan juga Herfiza Novianti.",
+    "like": 1.659,
+    "id_user": 3,
+    "edit": 0,
+    "delete": 0,
+    "createAt": null,
+    "editAt": null,
+    "deleteAt": null,
+    "komen": [
+      {
+        "id": 1,
+        "komentar": "Buku ini sangat menghibur",
+        "id_user": 2,
+        "like": 178,
+        "edit": 0,
+        "editAt": null,
+        "delete": 0,
+        "deleteAt": null,
+        "komen_lagi": [
+          {
+            "id": 1,
+            "id_komen": 1,
+            "komentar": "Benar buku ini sangat kocak",
+            "id_user": 2,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "id_komen": 1,
+            "komentar": "Benar buku ini sangat kocak",
+            "id_user": 3,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          },
+          {
+            "id": 2,
+            "id_komen": 1,
+            "komentar": "Terimakasih",
+            "id_user": 1,
+            "like": 178,
+            "edit": 0,
+            "editAt": null,
+            "delete": 0,
+            "deleteAt": null
+          }
+        ]
+      }
+    ]
+  }
+]
