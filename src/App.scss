@@ -1,37 +1,30 @@
-@import './sass/theme';
-@import '~bootstrap/scss/bootstrap';
+@import "./sass/theme";
+@import "~bootstrap/scss/bootstrap";
 
-@import './sass/pages/home.scss';
-@import './sass/components/footer';
+@import "./sass/pages/home.scss";
+@import "./sass/components/footer";
 
-@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 .slick-prev:before,
 .slick-next:before {
-	color: $secondary;
+  color: $secondary;
 }
 
 .slick-track {
-	display: flex !important;
+  display: flex !important;
 }
 
 .slick-slide {
-	padding: 0 12px;
-	height: auto !important;
+  padding: 0 12px;
+  height: auto !important;
 
-	div {
-		height: 100%;
-	}
+  div {
+    height: 100%;
+  }
 }
 
 .font-poppins {
-  font-family: 'Poppins', sans-serif;
-}
-
-.form-login .form-control {
-  border: #14c38e solid 3px;
-  width: 85%;
-  height: 50%;
-  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
 }
