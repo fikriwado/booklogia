@@ -7,23 +7,46 @@ import icongoogle from "../../assets/images/Google Icon.svg";
 import heroImage from "../../assets/images/hero.png";
 import iconlinkedin from "../../assets/images/Lingkedin Icon.svg";
 import userdata from "../../utils/users.json";
+import "../../sass/pages/_login.scss";
+import { toast } from "react-toastify";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordType, setPasswordType] = useState("password");
 
   const history = useHistory();
 
-  const handleLogin = () => {
-    const isValid =
-      userdata.filter(
-        (user) => user.email === email && user.password === password
-      ).length > 0;
-    if (isValid) {
-      alert("login success");
-      history.push("/");
+  const validateForm = () => {
+    return email.length > 0 && password.length > 0;
+  };
+
+  const tooglePassword = () => {
+    if (passwordType === "password") {
+      setPasswordType("text");
+      return;
+    }
+    setPasswordType("password");
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    const dataparse = userdata.map((item) => {
+      return item;
+    });
+
+    const userData = dataparse.find((user) => user.email === email);
+
+    if (userData) {
+      if (userData.password !== password) {
+        toast.error("login error periksa Password");
+      } else {
+        toast.success("login success");
+        history.push("/");
+      }
     } else {
-      alert("login gagal");
+      toast.error("login error periksa Email");
     }
   };
   return (
@@ -38,11 +61,13 @@ function Login() {
                 Email <span className="text-danger">*</span>{" "}
               </label>
               <input
+                autoFocus
                 type="email"
                 className="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
 
@@ -51,18 +76,28 @@ function Login() {
                 Password <span className="text-danger">*</span>
               </label>
               <input
-                type="password"
+                type={passwordType}
                 className="form-control"
                 id="exampleInputPassword1"
                 onChange={(e) => setPassword(e.target.value)}
+                required
               />
+              <div>
+                <input
+                  type="checkbox"
+                  checked={passwordType === "text" ? "checked" : ""}
+                  onChange={tooglePassword}
+                />
+                <label className="mx-1">Show Password</label>
+              </div>
             </div>
-            <button
-              onClick={handleLogin}
+            <input
+              type="submit"
               className="btn btn-danger text-white px-4 py-2"
-            >
-              SIGN IN
-            </button>
+              disabled={!validateForm()}
+              placeholder="SIGN IN"
+              onClick={handleLogin}
+            />
           </form>
           <div className="sign-option my-5">
             <h6 className="fw-bold">Or sign in using :</h6>
@@ -78,11 +113,6 @@ function Login() {
           <img src={heroImage} className="img-fluid" alt="" />
         </Col>
       </Row>
-
-      {/* <Button className='btn-login' as={Col} variant='primary'>
-        Button #1
-      </Button>
-      <h1>Ini adalah Login!</h1> <button>ini button</button> */}
     </Container>
   );
 }

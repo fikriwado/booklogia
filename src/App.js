@@ -8,11 +8,14 @@ import About from "./pages/About";
 import Forum from "./pages/Forum";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ToastContainer />
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
