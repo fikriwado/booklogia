@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-function About() {
+function Tips() {
     return (
         <Container className='py-3'>
-            <h1>Ini adalah About!</h1>
+            <h1>Ini adalah Tips!</h1>
         </Container>
     );
-}
+}   
 
-export default About;
+export default Tips;

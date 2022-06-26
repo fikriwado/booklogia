@@ -1,7 +1,6 @@
-import React from 'react';
-import logo from '../../logo.svg';
+import logo from '../../assets/images/logo-text.png';
 import { Link } from 'react-router-dom';
-import { Container, Navbar as NavbarBootstrap, Nav } from 'react-bootstrap';
+import { Container, Navbar as NavbarBootstrap, Nav, Button } from 'react-bootstrap';
 
 function Navbar() {
   return (
@@ -12,11 +11,9 @@ function Navbar() {
             <img
               alt=''
               src={logo}
-              width='30'
               height='30'
-              className='d-inline-block align-top'
+              className=''
             />{' '}
-            Booklogia
           </NavbarBootstrap.Brand>
           <NavbarBootstrap.Toggle aria-controls='basic-navbar-nav' />
           <NavbarBootstrap.Collapse id='basic-navbar-nav'>
@@ -27,15 +24,27 @@ function Navbar() {
                 <Link to='/about' className='nav-link me-3'>
                   About
                 </Link>
+                <Link to='/tips' className='nav-link me-3'>
+                  Tips
+                </Link>
                 <Link to='/forum' className='nav-link me-3'>
                   Forum
                 </Link>
-                <Link to='/login' className='nav-link me-3'>
-                  Login
-                </Link>
-                <Link to='/register' className='nav-link'>
-                  Register
-                </Link>
+            </Nav>
+            <Nav>
+              <Link to='/login' className='me-2'>
+                <Button variant='outline-light' className='px-4 py-2'>
+                Login
+                </Button>
+              </Link>
+
+              <span className='nav-link me-2'>or</span>
+
+              <Link to='/register'>
+                <Button variant='orange' className='px-4 py-2 text-light'>
+                Register
+                </Button>
+              </Link>
             </Nav>
           </NavbarBootstrap.Collapse>
         </Container>
