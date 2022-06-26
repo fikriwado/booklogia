@@ -12,12 +12,12 @@ function Register() {
       <Row className='align-items-center'>
         <Col md={6} xl={6} className='mx-auto'>
           <h1
-            className='fw-bold font-poppins'
+            className='fw-bold'
           >
             Let's Join With Us and
           </h1>
           <h1
-            className='fw-bold font-poppins'
+            className='fw-bold'
           >
             Make Your Own Reading Buddy !
           </h1>

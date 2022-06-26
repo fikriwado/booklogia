@@ -1,14 +1,14 @@
 import React from "react";
 import "../../sass/pages/_about.scss";
-import gambarSatu from "../../assets/images/About/gambar-satu.png";
-import gambarDua from "../../assets/images/About/gambar-dua.png";
-import gambarTiga from "../../assets/images/About/gambar-tiga.png";
-import gambarEmpat from "../../assets/images/About/gambar-empat.png";
-import gambarLima from "../../assets/images/About/gambar-lima.png";
-import gambarEnam from "../../assets/images/About/gambar-enam.png";
+import gambarSatu from "../../assets/images/Tips/gambar-satu.png";
+import gambarDua from "../../assets/images/Tips/gambar-dua.png";
+import gambarTiga from "../../assets/images/Tips/gambar-tiga.png";
+import gambarEmpat from "../../assets/images/Tips/gambar-empat.png";
+import gambarLima from "../../assets/images/Tips/gambar-lima.png";
+import gambarEnam from "../../assets/images/Tips/gambar-enam.png";
 import { Container } from "react-bootstrap";
 
-function About() {
+function Tips() {
   return (
     <section className="padding-y-xxl position-relative  pt-3 pb-5 z-index-1">
       <Container className=" max-width-adaptive-sm position-relative z-index-2">
@@ -152,4 +152,4 @@ function About() {
   );
 }
 
-export default About;
+export default Tips;
