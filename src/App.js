@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Artikel from "./pages/Tips/Detail/Artikel";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/forum" component={Forum} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/artikel" component={Artikel} />
         </Switch>
         <Footer />
       </Router>
