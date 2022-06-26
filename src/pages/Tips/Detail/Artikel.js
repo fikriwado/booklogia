@@ -1,5 +1,6 @@
 import React from "react";
 
+// Ini page untuk semua artikel, bukan untuk satu satu
 function Artikel() {
   return (
     <div>
