@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 @import "./sass/theme";
 @import "~bootstrap/scss/bootstrap";
 
@@ -6,6 +7,10 @@
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+
+body {
+  font-family: "Poppins", sans-serif;
+}
 
 .slick-prev:before,
 .slick-next:before {
@@ -23,8 +28,4 @@
   div {
     height: 100%;
   }
-}
-
-.font-poppins {
-  font-family: "Poppins", sans-serif;
 }

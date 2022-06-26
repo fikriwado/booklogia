@@ -44,7 +44,7 @@ function Footer() {
 
           <hr className='w-100 bg-secondary d-md-none' />
 
-          <Col md={3} className='pe-xl-5'>
+          <Col md={3} className='pe-xl-4'>
             <h5 className='text-uppercase mb-4 font-weight-bold'>About</h5>
             <p>
               Buku sering disebut sebagai jendela dunia karena dengan membaca
