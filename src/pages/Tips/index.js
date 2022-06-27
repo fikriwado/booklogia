@@ -1,13 +1,8 @@
 import React from "react";
 import "../../sass/pages/_about.scss";
-import gambarSatu from "../../assets/images/Tips/gambar-satu.png";
-import gambarDua from "../../assets/images/Tips/gambar-dua.png";
-import gambarTiga from "../../assets/images/Tips/gambar-tiga.png";
-import gambarEmpat from "../../assets/images/Tips/gambar-empat.png";
-import gambarLima from "../../assets/images/Tips/gambar-lima.png";
-import gambarEnam from "../../assets/images/Tips/gambar-enam.png";
 import { Container } from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import tipsData from "../../utils/tips.json";
 
 function Tips() {
   return (
@@ -45,108 +40,21 @@ function Tips() {
 
       <div className="container">
         <div className="row row-cols-1 row-cols-md-3 g-4">
-          <div className="col">
-            <Link
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              className="text-decoration-none text-dark"
-              to="/artikel"
-            >
-              <div className="card h-100 card-kegiatan">
-                <img src={gambarSatu} alt="" className="card-img-top img" />
-                <div className="card-body ">
-                  <h5>Belajar dengan siswa SMA Malang</h5>
-                  <p className="card-text">4 Sep 2021</p>
-                </div>
+          {
+            tipsData.map((tips) => 
+              <div className="col" key={tips.slug}>
+                <Link to={"/tips/" + tips.slug} className="text-decoration-none text-dark">
+                  <div className="card h-100 card-kegiatan">
+                    <img src={window.location.origin + "/assets/images/tips/" + tips.thumbnail} alt={tips.judul} className="card-img-top img-fluid" />
+                    <div className="card-body ">
+                      <h5>{tips.judul}</h5>
+                      <p className="card-text">{tips.tanggal}</p>
+                    </div>
+                  </div>
+                </Link>
               </div>
-            </Link>
-          </div>
-          <div className="col">
-            <Link
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              className="text-decoration-none text-dark"
-              to="/artikel"
-            >
-              <div className="card h-100 card-kegiatan">
-                <img src={gambarDua} alt="" className="card-img-top img" />
-                <div className="card-body">
-                  <h5>Ngoding bersama mahasiswa UMM</h5>
-                  <p className="card-text">4 Sep 2021</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div className="col">
-            <Link
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              className="text-decoration-none text-dark"
-              to="/artikel"
-            >
-              <div className="card h-100 card-kegiatan">
-                <img src={gambarTiga} alt="" className="card-img-top img" />
-                <div className="card-body">
-                  <h5>Bootcamp laravel collab with Labit UMM</h5>
-                  <p className="card-text">4 Sep 2021</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div className="col">
-            <Link
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              className="text-decoration-none text-dark"
-              to="/artikel"
-            >
-              <div className="card h-100 card-kegiatan">
-                <img src={gambarEmpat} alt="" className="card-img-top img" />
-                <div className="card-body">
-                  <h5>Lomba prototype web app </h5>
-                  <p className="card-text">4 Sep 2021</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div className="col">
-            <Link
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              className="text-decoration-none text-dark"
-              to="/artikel"
-            >
-              <div className="card h-100 card-kegiatan">
-                <img src={gambarLima} alt="" className="card-img-top img" />
-                <div className="card-body">
-                  <h5>Lomba kecerdasan buatan</h5>
-                  <p className="card-text">4 Sep 2021</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div className="col">
-            <Link
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              className="text-decoration-none text-dark"
-              to="/artikel"
-            >
-              <div className="card h-100 card-kegiatan">
-                <img src={gambarEnam} alt="" className="card-img-top img" />
-                <div className="card-body">
-                  <h5>Lomba prototype mobile app</h5>
-                  <p className="card-text">4 Sep 2021</p>
-                </div>
-              </div>
-            </Link>
-          </div>
+            )
+          }
         </div>
       </div>
     </section>
