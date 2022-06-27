@@ -28,9 +28,6 @@ function Navbar() {
                 <Link to='/' className='nav-link ms-2 me-3'>
                   Home
                 </Link>
-                <Link to='/about' className='nav-link me-3'>
-                  About
-                </Link>
                 <Link to='/tips' className='nav-link me-3'>
                   Tips
                 </Link>

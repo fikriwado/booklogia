@@ -116,8 +116,8 @@ function Forum() {
                     How to Choose Bicycle For Spring In Australia Shopping
                     Center?
                   </h4>
-                  <p class="mt-3 mb-4">
-                    <span class="fw-medium">Booklogia </span> menyediakan banyak
+                  <p className="mt-3 mb-4">
+                    <span className="fw-medium">Booklogia </span> menyediakan banyak
                     jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
                     <span className="fa-solid fa-arrow-right-long"></span>
                   </p>
@@ -150,8 +150,8 @@ function Forum() {
                     How to Choose Bicycle For Spring In Australia Shopping
                     Center?
                   </h4>
-                  <p class="mt-3 mb-4">
-                    <span class="fw-medium">Booklogia </span> menyediakan banyak
+                  <p className="mt-3 mb-4">
+                    <span className="fw-medium">Booklogia </span> menyediakan banyak
                     jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
                     <span className="fa-solid fa-arrow-right-long"></span>
                   </p>
@@ -184,8 +184,8 @@ function Forum() {
                     How to Choose Bicycle For Spring In Australia Shopping
                     Center?
                   </h4>
-                  <p class="mt-3 mb-4">
-                    <span class="fw-medium">Booklogia </span> menyediakan banyak
+                  <p className="mt-3 mb-4">
+                    <span className="fw-medium">Booklogia </span> menyediakan banyak
                     jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
                     <span className="fa-solid fa-arrow-right-long"></span>
                   </p>
@@ -218,8 +218,8 @@ function Forum() {
                     How to Choose Bicycle For Spring In Australia Shopping
                     Center?
                   </h4>
-                  <p class="mt-3 mb-4">
-                    <span class="fw-medium">Booklogia </span> menyediakan banyak
+                  <p className="mt-3 mb-4">
+                    <span className="fw-medium">Booklogia </span> menyediakan banyak
                     jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
                     <span className="fa-solid fa-arrow-right-long"></span>
                   </p>
@@ -251,8 +251,8 @@ function Forum() {
                     How to Choose Bicycle For Spring In Australia Shopping
                     Center?
                   </h4>
-                  <p class="mt-3 mb-4">
-                    <span class="fw-medium">Booklogia </span> menyediakan banyak
+                  <p className="mt-3 mb-4">
+                    <span className="fw-medium">Booklogia </span> menyediakan banyak
                     jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
                     <span className="fa-solid fa-arrow-right-long"></span>
                   </p>
@@ -284,8 +284,8 @@ function Forum() {
                     How to Choose Bicycle For Spring In Australia Shopping
                     Center?
                   </h4>
-                  <p class="mt-3 mb-4">
-                    <span class="fw-medium">Booklogia </span> menyediakan banyak
+                  <p className="mt-3 mb-4">
+                    <span className="fw-medium">Booklogia </span> menyediakan banyak
                     jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
                     <span className="fa-solid fa-arrow-right-long"></span>
                   </p>

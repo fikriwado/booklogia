@@ -7,6 +7,7 @@ import gambarEmpat from "../../assets/images/Tips/gambar-empat.png";
 import gambarLima from "../../assets/images/Tips/gambar-lima.png";
 import gambarEnam from "../../assets/images/Tips/gambar-enam.png";
 import { Container } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 function Tips() {
   return (
@@ -45,12 +46,12 @@ function Tips() {
       <div className="container">
         <div className="row row-cols-1 row-cols-md-3 g-4">
           <div className="col">
-            <a
+            <Link
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
               className="text-decoration-none text-dark"
-              href="/Artikel"
+              to="/artikel"
             >
               <div className="card h-100 card-kegiatan">
                 <img src={gambarSatu} alt="" className="card-img-top img" />
@@ -59,15 +60,15 @@ function Tips() {
                   <p className="card-text">4 Sep 2021</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="col">
-            <a
+            <Link
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
               className="text-decoration-none text-dark"
-              href="/Artikel"
+              to="/artikel"
             >
               <div className="card h-100 card-kegiatan">
                 <img src={gambarDua} alt="" className="card-img-top img" />
@@ -76,15 +77,15 @@ function Tips() {
                   <p className="card-text">4 Sep 2021</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="col">
-            <a
+            <Link
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
               className="text-decoration-none text-dark"
-              href="/Artikel"
+              to="/artikel"
             >
               <div className="card h-100 card-kegiatan">
                 <img src={gambarTiga} alt="" className="card-img-top img" />
@@ -93,15 +94,15 @@ function Tips() {
                   <p className="card-text">4 Sep 2021</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="col">
-            <a
+            <Link
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
               className="text-decoration-none text-dark"
-              href="/Artikel"
+              to="/artikel"
             >
               <div className="card h-100 card-kegiatan">
                 <img src={gambarEmpat} alt="" className="card-img-top img" />
@@ -110,15 +111,15 @@ function Tips() {
                   <p className="card-text">4 Sep 2021</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="col">
-            <a
+            <Link
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
               className="text-decoration-none text-dark"
-              href="/Artikel"
+              to="/artikel"
             >
               <div className="card h-100 card-kegiatan">
                 <img src={gambarLima} alt="" className="card-img-top img" />
@@ -127,15 +128,15 @@ function Tips() {
                   <p className="card-text">4 Sep 2021</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="col">
-            <a
+            <Link
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
               className="text-decoration-none text-dark"
-              href="/Artikel"
+              to="/artikel"
             >
               <div className="card h-100 card-kegiatan">
                 <img src={gambarEnam} alt="" className="card-img-top img" />
@@ -144,7 +145,7 @@ function Tips() {
                   <p className="card-text">4 Sep 2021</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
