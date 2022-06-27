@@ -1,20 +1,23 @@
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import userdata from "../../utils/users.json";
+import { toast } from "react-toastify";
+import { login } from '../../redux/authSlice';
 import iconfb from "../../assets/images/Facebook Icon.svg";
 import icongithub from "../../assets/images/Github Icon.svg";
 import icongoogle from "../../assets/images/Google Icon.svg";
 import heroImage from "../../assets/images/hero.png";
 import iconlinkedin from "../../assets/images/Lingkedin Icon.svg";
-import userdata from "../../utils/users.json";
 import "../../sass/pages/_login.scss";
-import { toast } from "react-toastify";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordType, setPasswordType] = useState("password");
 
+  const dispatch = useDispatch();
   const history = useHistory();
 
   const validateForm = () => {
@@ -42,6 +45,7 @@ function Login() {
       if (userData.password !== password) {
         toast.error("login error periksa Password");
       } else {
+        dispatch(login({ user: userData }));
         toast.success("login success");
         history.push("/");
       }

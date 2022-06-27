@@ -1,35 +1,35 @@
 [
   {
     "id": 1,
-    "nama": "zelda",
+    "nama": "Zelda Ababil",
     "email": "zeldaababil01@gmail.com",
     "foto_profil": "../../assets/images/Forum/User.png",
     "password": "12345"
   },
   {
     "id": 2,
-    "nama": "fikri",
+    "nama": "Moch Fikri Khoirurrizal",
     "email": "fikri@gmail.com",
     "foto_profil": "../../assets/images/Forum/User.png",
     "password": "12345"
   },
   {
     "id": 3,
-    "nama": "fahmi",
+    "nama": "Fahmi Ali Husni",
     "email": "fahmi@gmail.com",
     "foto_profil": "../../assets/images/Forum/User.png",
     "password": "12345"
   },
   {
     "id": 4,
-    "nama": "syaeful",
+    "nama": "Shaeful Hidayah",
     "email": "syaeful@gmail.com",
     "foto_profil": "../../assets/images/Forum/User.png",
     "password": "12345"
   },
   {
     "id": 5,
-    "nama": "kevin",
+    "nama": "Kevin Christian Alexander",
     "email": "kevin@gmail.com",
     "foto_profil": "../../assets/images/Forum/User.png",
     "password": "12345"

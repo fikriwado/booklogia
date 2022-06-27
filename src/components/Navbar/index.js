@@ -1,8 +1,15 @@
 import logo from '../../assets/images/logo-text.png';
+import profil from '../../assets/images/Forum/User.png';
 import { Link } from 'react-router-dom';
-import { Container, Navbar as NavbarBootstrap, Nav, Button } from 'react-bootstrap';
+import { Container, Navbar as NavbarBootstrap, Nav, NavDropdown, Button } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../redux/authSlice';
 
 function Navbar() {
+  const { isAuthorized, user } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
   return (
     <>
       <NavbarBootstrap bg='warning' variant='light' expand='lg' className='py-3'>
@@ -31,20 +38,36 @@ function Navbar() {
                   Forum
                 </Link>
             </Nav>
-            <Nav>
-              <Link to='/login' className='me-2'>
-                <Button variant='outline-light' className='px-4 py-2'>
-                Login
-                </Button>
-              </Link>
+            <Nav className='align-items-center'>
+              {isAuthorized ? (
+                <>
+                  <img
+                    alt=''
+                    src={profil}
+                    height='35'
+                    className='bg-light rounded-circle'
+                  />{' '}
+                  <NavDropdown title={user.nama} id="basic-nav-dropdown">
+                    <NavDropdown.Item onClick={() => dispatch(logout())}>Logout</NavDropdown.Item>
+                  </NavDropdown>
+                </>
+              ) : (
+                <>
+                  <Link to='/login' className='me-2'>
+                    <Button variant='outline-light' className='px-4 py-2'>
+                    Login
+                    </Button>
+                  </Link>
 
-              <span className='nav-link me-2'>or</span>
+                  <span className='nav-link me-2'>or</span>
 
-              <Link to='/register'>
-                <Button variant='orange' className='px-4 py-2 text-light'>
-                Register
-                </Button>
-              </Link>
+                  <Link to='/register'>
+                    <Button variant='orange' className='px-4 py-2 text-light'>
+                    Register
+                    </Button>
+                  </Link>
+                </>
+              )}
             </Nav>
           </NavbarBootstrap.Collapse>
         </Container>
