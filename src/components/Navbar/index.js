@@ -14,13 +14,15 @@ function Navbar() {
     <>
       <NavbarBootstrap bg='warning' variant='light' expand='lg' className='py-3'>
         <Container>
-          <NavbarBootstrap.Brand href='/'>
-            <img
-              alt=''
-              src={logo}
-              height='30'
-              className=''
-            />{' '}
+          <NavbarBootstrap.Brand>
+            <Link to='/'>
+              <img
+                alt=''
+                src={logo}
+                height='30'
+                className=''
+              />{' '}
+            </Link>
           </NavbarBootstrap.Brand>
           <NavbarBootstrap.Toggle aria-controls='basic-navbar-nav' />
           <NavbarBootstrap.Collapse id='basic-navbar-nav'>
