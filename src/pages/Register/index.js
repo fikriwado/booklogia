@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 
 function Register() {
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
+  const [nama, setNama] = useState("");
   const [password, setPassword] = useState("");
   const [passwordType, setPasswordType] = useState("password");
 
@@ -20,7 +20,7 @@ function Register() {
   const history = useHistory();
 
   const validateForm = () => {
-    return email.length > 0 && username.length > 0 && password.length > 0;
+    return email.length > 0 && nama.length > 0 && password.length > 0;
   };
 
   const togglePassword = () => {
@@ -34,9 +34,14 @@ function Register() {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    const userData = [username, email, password];
+    const userData = {
+      nama: nama,
+      email: email,
+      password: password,
+    };
 
-    if (username !== "") {
+    console.log(userData);
+    if (nama !== "") {
       if (email !== "") {
         if (password !== "") {
           dispatch(login({ user: userData }));
@@ -70,7 +75,7 @@ function Register() {
                 id="exampleInputusername1"
                 aria-describedby="emailHelp"
                 required
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setNama(e.target.value)}
               />
             </div>
 
