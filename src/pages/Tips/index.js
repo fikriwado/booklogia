@@ -1,7 +1,7 @@
 import React from "react";
 import "../../sass/pages/_about.scss";
 import { Container } from "react-bootstrap";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import tipsData from "../../utils/tips.json";
 
 function Tips() {
@@ -40,21 +40,30 @@ function Tips() {
 
       <div className="container">
         <div className="row row-cols-1 row-cols-md-3 g-4">
-          {
-            tipsData.map((tips) => 
-              <div className="col" key={tips.slug}>
-                <Link to={"/tips/" + tips.slug} className="text-decoration-none text-dark">
-                  <div className="card h-100 card-kegiatan">
-                    <img src={window.location.origin + "/assets/images/tips/" + tips.thumbnail} alt={tips.judul} className="card-img-top img-fluid" />
-                    <div className="card-body ">
-                      <h5>{tips.judul}</h5>
-                      <p className="card-text">{tips.tanggal}</p>
-                    </div>
+          {tipsData.map((tips) => (
+            <div className="col" key={tips.slug}>
+              <Link
+                to={"/tips/" + tips.slug}
+                className="text-decoration-none text-dark"
+              >
+                <div className="card h-100 card-kegiatan">
+                  <img
+                    src={
+                      window.location.origin +
+                      "/assets/images/tips/" +
+                      tips.thumbnail
+                    }
+                    alt={tips.judul}
+                    className="card-img-top img-fluid"
+                  />
+                  <div className="card-body ">
+                    <h5>{tips.judul}</h5>
+                    <p className="card-text">{tips.tanggal}</p>
                   </div>
-                </Link>
-              </div>
-            )
-          }
+                </div>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>
