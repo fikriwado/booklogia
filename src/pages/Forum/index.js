@@ -3,6 +3,7 @@ import "../../sass/pages/_forum.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import Desainzero from "../../assets/images/Forum/Desainzero.png";
 import User from "../../assets/images/Forum/User.png";
+import dataThreads from "../../utils/threads.json";
 
 function Forum() {
   return (
@@ -107,207 +108,46 @@ function Forum() {
       <Col md={12} className="pageabout-3 bg-light pt-3">
         <Container className="pb-5">
           <Row className="row row-cols-1 row-cols-md-3 g-4 pb-4">
-            <Col>
-              <img className="img-round" src={Desainzero} alt="" width="100%" />
+            {dataThreads.map((thread) => (
+              <Col>
+                <img
+                  className="img-round"
+                  src={Desainzero}
+                  alt=""
+                  width="100%"
+                />
 
-              <div className="d-flex align-items-center pt-3">
-                <div>
-                  <h4>
-                    How to Choose Bicycle For Spring In Australia Shopping
-                    Center?
-                  </h4>
-                  <p className="mt-3 mb-4">
-                    <span className="fw-medium">Booklogia </span> menyediakan banyak
-                    jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
-                    <span className="fa-solid fa-arrow-right-long"></span>
-                  </p>
-                  <div className="d-flex ">
-                    <img
-                      src={User}
-                      className="bg-secondary rounded"
-                      alt=""
-                      width="12%"
-                    />
-                    <Container className=" d-flex align-items-center ml-2">
-                      <div>
-                        <h6>
-                          By: Cristiano Ronaldo <br />
-                          <span className="text-sub-blog">16 June 2022</span>
-                        </h6>
-                      </div>
-                    </Container>
+                <div className="d-flex align-items-center pt-3">
+                  <div>
+                    <h4>{thread.judul}</h4>
+                    <p className="mt-3 mb-4">
+                      <span className="fw-medium"> </span>
+                      {thread.story}
+                      <span className="fa-solid fa-arrow-right-long"></span>
+                    </p>
+                    <div className="d-flex ">
+                      <img
+                        src={User}
+                        className="bg-secondary rounded"
+                        alt=""
+                        width="12%"
+                      />
+                      <Container className=" d-flex align-items-center ml-2">
+                        <div>
+                          <h6>
+                            By: {thread.penulis}
+                            <br />
+                            <span className="text-sub-blog">
+                              {thread.tanggal}
+                            </span>
+                          </h6>
+                        </div>
+                      </Container>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Col>
-
-            <Col>
-              <img className="img-round" src={Desainzero} alt="" width="100%" />
-
-              <div className="d-flex align-items-center pt-3">
-                <div>
-                  <h4>
-                    How to Choose Bicycle For Spring In Australia Shopping
-                    Center?
-                  </h4>
-                  <p className="mt-3 mb-4">
-                    <span className="fw-medium">Booklogia </span> menyediakan banyak
-                    jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
-                    <span className="fa-solid fa-arrow-right-long"></span>
-                  </p>
-                  <div className="d-flex ">
-                    <img
-                      src={User}
-                      className="bg-secondary rounded"
-                      alt=""
-                      width="12%"
-                    />
-                    <Container className=" d-flex align-items-center ml-2">
-                      <div>
-                        <h6>
-                          By: Cristiano Ronaldo <br />
-                          <span className="text-sub-blog">16 June 2022</span>
-                        </h6>
-                      </div>
-                    </Container>
-                  </div>
-                </div>
-              </div>
-            </Col>
-
-            <Col>
-              <img className="img-round" src={Desainzero} alt="" width="100%" />
-
-              <div className="d-flex align-items-center pt-3">
-                <div>
-                  <h4>
-                    How to Choose Bicycle For Spring In Australia Shopping
-                    Center?
-                  </h4>
-                  <p className="mt-3 mb-4">
-                    <span className="fw-medium">Booklogia </span> menyediakan banyak
-                    jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
-                    <span className="fa-solid fa-arrow-right-long"></span>
-                  </p>
-                  <div className="d-flex ">
-                    <img
-                      src={User}
-                      className="bg-secondary rounded"
-                      alt=""
-                      width="12%"
-                    />
-                    <Container className=" d-flex align-items-center ml-2">
-                      <div>
-                        <h6>
-                          By: Cristiano Ronaldo <br />
-                          <span className="text-sub-blog">16 June 2022</span>
-                        </h6>
-                      </div>
-                    </Container>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            {/* Baris ke kedua */}
-            <Col>
-              <img className="img-round" src={Desainzero} alt="" width="100%" />
-
-              <div className="d-flex align-items-center pt-3">
-                <div>
-                  <h4>
-                    How to Choose Bicycle For Spring In Australia Shopping
-                    Center?
-                  </h4>
-                  <p className="mt-3 mb-4">
-                    <span className="fw-medium">Booklogia </span> menyediakan banyak
-                    jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
-                    <span className="fa-solid fa-arrow-right-long"></span>
-                  </p>
-                  <div className="d-flex ">
-                    <img
-                      src={User}
-                      className="bg-secondary rounded"
-                      alt=""
-                      width="12%"
-                    />
-                    <Container className=" d-flex align-items-center ml-2">
-                      <div>
-                        <h6>
-                          By: Cristiano Ronaldo <br />
-                          <span className="text-sub-blog">16 June 2022</span>
-                        </h6>
-                      </div>
-                    </Container>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col>
-              <img className="img-round" src={Desainzero} alt="" width="100%" />
-
-              <div className="d-flex align-items-center pt-3">
-                <div>
-                  <h4>
-                    How to Choose Bicycle For Spring In Australia Shopping
-                    Center?
-                  </h4>
-                  <p className="mt-3 mb-4">
-                    <span className="fw-medium">Booklogia </span> menyediakan banyak
-                    jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
-                    <span className="fa-solid fa-arrow-right-long"></span>
-                  </p>
-                  <div className="d-flex ">
-                    <img
-                      src={User}
-                      className="bg-secondary rounded"
-                      alt=""
-                      width="12%"
-                    />
-                    <Container className=" d-flex align-items-center ml-2">
-                      <div>
-                        <h6>
-                          By: Cristiano Ronaldo <br />
-                          <span className="text-sub-blog">16 June 2022</span>
-                        </h6>
-                      </div>
-                    </Container>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col>
-              <img className="img-round" src={Desainzero} alt="" width="100%" />
-
-              <div className="d-flex align-items-center pt-3">
-                <div>
-                  <h4>
-                    How to Choose Bicycle For Spring In Australia Shopping
-                    Center?
-                  </h4>
-                  <p className="mt-3 mb-4">
-                    <span className="fw-medium">Booklogia </span> menyediakan banyak
-                    jasa yang dapat di pilih sesuai yang di butuhkan konsumen...
-                    <span className="fa-solid fa-arrow-right-long"></span>
-                  </p>
-                  <div className="d-flex ">
-                    <img
-                      src={User}
-                      className="bg-secondary rounded"
-                      alt=""
-                      width="12%"
-                    />
-                    <Container className=" d-flex align-items-center ml-2">
-                      <div>
-                        <h6>
-                          By: Cristiano Ronaldo <br />
-                          <span className="text-sub-blog">16 June 2022</span>
-                        </h6>
-                      </div>
-                    </Container>
-                  </div>
-                </div>
-              </div>
-            </Col>
+              </Col>
+            ))}
           </Row>
         </Container>
       </Col>

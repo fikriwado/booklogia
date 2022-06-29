@@ -1,4 +1,3 @@
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -10,7 +9,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Artikel from "./pages/Tips/Detail/Artikel";
+import Artikel from "./pages/Tips/Detail";
 
 function App() {
   return (
@@ -20,11 +19,11 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/tips" component={Tips} />
+          <Route exact path="/tips" component={Tips} />
           <Route path="/forum" component={Forum} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
-          <Route path="/artikel" component={Artikel} />
+          <Route path="/tips/:slug" component={Artikel} />
         </Switch>
         <Footer />
       </Router>

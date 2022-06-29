@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "slug": "belajar-dengan-siswa-sma-malang",
+        "judul": "Belajar dengan siswa SMA Malang",
+        "tanggal": "4 Sep 2021",
+        "thumbnail": "gambar-satu.png"
+    },
+    {
+        "id": 2,
+        "slug": "ngoding-bersama-mahasiswa-umm",
+        "judul": "Ngoding bersama mahasiswa UMM",
+        "tanggal": "4 Sep 2021",
+        "thumbnail": "gambar-dua.png"
+    },
+    {
+        "id": 3,
+        "slug": "bootcamp-laravel-collab-with-labit-umm",
+        "judul": "Bootcamp laravel collab with Labit UMM",
+        "tanggal": "4 Sep 2021",
+        "thumbnail": "gambar-tiga.png"
+    },
+    {
+        "id": 4,
+        "slug": "lomba-prototype-web-app",
+        "judul": "Lomba Prototype Web App",
+        "tanggal": "4 Sep 2021",
+        "thumbnail": "gambar-empat.png"
+    },
+    {
+        "id": 5,
+        "slug": "lomba-kecerdasan-buatan",
+        "judul": "Lomba Kecerdasan Buatan",
+        "tanggal": "4 Sep 2021",
+        "thumbnail": "gambar-lima.png"
+    },
+    {
+        "id": 6,
+        "slug": "lomba-prototype-mobile-app",
+        "judul": "Lomba Prototype Mobile App",
+        "tanggal": "4 Sep 2021",
+        "thumbnail": "gambar-enam.png"
+    }
+]
