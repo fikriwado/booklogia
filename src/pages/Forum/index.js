@@ -1,11 +1,74 @@
 import React from "react";
 import "../../sass/pages/_forum.scss";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Button, Modal, Form } from "react-bootstrap";
 import Desainzero from "../../assets/images/Forum/Desainzero.png";
 import User from "../../assets/images/Forum/User.png";
 import dataThreads from "../../utils/threads.json";
+import { useState } from "react";
 
 function Forum() {
+  const Example = () => {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    return (
+      <>
+        <Button
+          onClick={handleShow}
+          type="button"
+          data-toggle="modal"
+          className="w-100 btn btn-danger mx-md-2  mb-5 mt-5 "
+        >
+          <i className="fa fa-solid fa-plus pr-3 pl-3 text-white"> </i>
+        </Button>
+
+        <Modal size="xl" show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form>
+              <Form.Group
+                className="mb-3 "
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Judul</Form.Label>
+                <Form.Control type="judul" autoFocus />
+              </Form.Group>
+              <Form.Group
+                className="mb-3 "
+                controlId="exampleForm.ControlInput2"
+              >
+                <Form.Label>Penulis</Form.Label>
+                <Form.Control type="penulis" autoFocus />
+              </Form.Group>
+              <Form.Group
+                className="mb-3 "
+                controlId="exampleForm.ControlInput3"
+              >
+                <Form.Label>Tanggal</Form.Label>
+                <Form.Control type="tanggal" autoFocus />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Tentang Buku</Form.Label>
+                <Form.Control as="textarea" type="deskripsi" rows={3} />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </>
+    );
+  };
+
   return (
     <div>
       <Col className="banner-blog-parent ">
@@ -47,14 +110,17 @@ function Forum() {
                   </Col>
                 </Col>
                 <div className="add">
-                  <button
+                  {/* <button
                     type="button"
+                    data-toggle="modal"
                     className="w-100 btn btn-danger mx-md-2  mb-5 mt-5 "
                   >
                     <i className="fa fa-solid fa-plus pr-3 pl-3 text-white">
                       {" "}
                     </i>
-                  </button>
+                  </button> */}
+
+                  <Example />
                 </div>
               </div>
             </Col>
