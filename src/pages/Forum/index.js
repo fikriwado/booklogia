@@ -90,16 +90,6 @@ function Forum() {
               <div className="d-flex justify-content-center align-items-center">
                 <Search />
                 <div className="add">
-                  {/* <button
-                    type="button"
-                    data-toggle="modal"
-                    className="w-100 btn btn-danger mx-md-2  mb-5 mt-5 "
-                  >
-                    <i className="fa fa-solid fa-plus pr-3 pl-3 text-white">
-                      {" "}
-                    </i>
-                  </button> */}
-
                   <Example />
                 </div>
               </div>
