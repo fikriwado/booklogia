@@ -11,10 +11,6 @@ export const authSlice = createSlice({
       state.isAuthorized = true;
       state.user = action.payload.user;
     },
-    // register: (state, action) => {
-    //   state.isAuthorized = true;
-    //   state.user = action.payload.user;
-    // },
     logout: (state) => {
       state.isAuthorized = false;
       state.user = {};

@@ -40,7 +40,7 @@ function Login() {
     });
 
     const userData = dataparse.find((user) => user.email === email);
-
+    console.log(userData);
     if (userData) {
       if (userData.password !== password) {
         toast.error("login error periksa Password");

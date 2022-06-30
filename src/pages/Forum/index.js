@@ -5,6 +5,7 @@ import Desainzero from "../../assets/images/Forum/Desainzero.png";
 import User from "../../assets/images/Forum/User.png";
 import dataThreads from "../../utils/threads.json";
 import { useState } from "react";
+import Search from "../../components/Search";
 
 function Forum() {
   const Example = () => {
@@ -87,28 +88,7 @@ function Forum() {
                 </span>
               </p>
               <div className="d-flex justify-content-center align-items-center">
-                <Col className="search mr-2">
-                  <Col className="w-100 h-100 d-flex justify-content-center align-items-center ">
-                    <form
-                      action="/action_page.php"
-                      className="d-flex align-items-center form-container"
-                    >
-                      <input
-                        type="text"
-                        placeholder="Search.."
-                        name="search "
-                        className="search-input p-2 mr-5"
-                      />
-
-                      <button
-                        type="button"
-                        className="btn btn-primary mx-md-2 button-search mb-5 mt-5"
-                      >
-                        <i className="fa fa-search pr-3 pl-3 text-white"> </i>
-                      </button>
-                    </form>
-                  </Col>
-                </Col>
+                <Search />
                 <div className="add">
                   {/* <button
                     type="button"
