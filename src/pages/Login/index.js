@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import userdata from "../../utils/users.json";
 import { toast } from "react-toastify";
-import { login } from '../../redux/authSlice';
+import { login } from "../../redux/authSlice";
 import iconfb from "../../assets/images/Facebook Icon.svg";
 import icongithub from "../../assets/images/Github Icon.svg";
 import icongoogle from "../../assets/images/Google Icon.svg";
@@ -40,7 +40,7 @@ function Login() {
     });
 
     const userData = dataparse.find((user) => user.email === email);
-
+    console.log(userData);
     if (userData) {
       if (userData.password !== password) {
         toast.error("login error periksa Password");
