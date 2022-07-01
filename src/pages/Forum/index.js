@@ -155,7 +155,7 @@ function Forum() {
         <Container className="pb-5">
           <Row className="row row-cols-1 row-cols-md-3 g-4 pb-4">
             {dataThreads.map((thread) => (
-              <Col>
+              <Col key={thread.id}>
                 <img
                   className="img-round"
                   src={Desainzero}

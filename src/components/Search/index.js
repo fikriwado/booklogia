@@ -56,6 +56,7 @@ const Search = () => {
                     <Row
                       className="d-flex align-items-center pb-4"
                       style={{ width: "900px" }}
+                      key={val.id}
                     >
                       <Col className="d-flex justify-content-center">
                         <img
