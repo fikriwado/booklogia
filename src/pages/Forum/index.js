@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import "../../sass/pages/_forum.scss";
 import { Col, Container, Row, Button, Modal, Form } from "react-bootstrap";
 import Desainzero from "../../assets/images/Forum/Desainzero.png";
@@ -6,70 +6,12 @@ import User from "../../assets/images/Forum/User.png";
 import dataThreads from "../../utils/threads.json";
 import { useState } from "react";
 import Search from "../../components/Search";
+import { useDispatch, useSelector } from "react-redux";
+import { setThreads } from "../../redux/threadsSlice";
 
 function Forum() {
-  const Example = () => {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    return (
-      <>
-        <Button
-          onClick={handleShow}
-          type="button"
-          data-toggle="modal"
-          className="w-100 btn btn-danger mx-md-2  mb-5 mt-5 "
-        >
-          <i className="fa fa-solid fa-plus pr-3 pl-3 text-white"> </i>
-        </Button>
-
-        <Modal size="xl" show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form>
-              <Form.Group
-                className="mb-3 "
-                controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label>Judul</Form.Label>
-                <Form.Control type="judul" autoFocus />
-              </Form.Group>
-              <Form.Group
-                className="mb-3 "
-                controlId="exampleForm.ControlInput2"
-              >
-                <Form.Label>Penulis</Form.Label>
-                <Form.Control type="penulis" autoFocus />
-              </Form.Group>
-              <Form.Group
-                className="mb-3 "
-                controlId="exampleForm.ControlInput3"
-              >
-                <Form.Label>Tanggal</Form.Label>
-                <Form.Control type="tanggal" autoFocus />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
-                <Form.Label>Tentang Buku</Form.Label>
-                <Form.Control as="textarea" type="deskripsi" rows={3} />
-              </Form.Group>
-            </Form>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </>
-    );
-  };
-
+  const { threads } = useSelector((state) => state.threads);
+  
   return (
     <div>
       <Col className="banner-blog-parent ">
@@ -144,8 +86,8 @@ function Forum() {
       <Col md={12} className="pageabout-3 bg-light pt-3">
         <Container className="pb-5">
           <Row className="row row-cols-1 row-cols-md-3 g-4 pb-4">
-            {dataThreads.map((thread) => (
-              <Col>
+            {threads.slice().sort((a, b) => b.id - a.id).map((thread) => (
+              <Col key={thread.id}>
                 <img
                   className="img-round"
                   src={Desainzero}
@@ -192,3 +134,138 @@ function Forum() {
 }
 
 export default Forum;
+
+// -------- Modal --------
+const Example = () => {
+  const { threads } = useSelector((state) => state.threads);
+  const [show, setShow] = useState(false);
+  const [inputThread, setInputThread] = useState({
+      title: '',
+      writer: '',
+      date: '',
+      description: '',
+  });
+  
+  const dispatch = useDispatch();
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInputThread({ ...inputThread, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let lastId = threads[threads.length-1].id;
+
+    const newThread = {
+      "judul": inputThread.title,
+      "id": ++lastId,
+      "fotobuku": "../../assets/images/Forum/Desainzero.png",
+      "deskripsi": inputThread.description,
+      "story": "Buku ini menjadi salah satu buku yang paling laris di antara beberapa buku terkait self improvemen",
+      "penulis": inputThread.writer,
+      "tanggal": inputThread.date,
+      "like": 0,
+      "id_user": 5,
+      "edit": 0,
+      "delete": 0,
+      "createAt": null,
+      "editAt": null,
+      "deleteAt": null,
+      "komen": []
+    }
+
+    dispatch(setThreads(newThread));
+    
+    setInputThread({
+      title: '',
+      writer: '',
+      date: '',
+      description: '',
+    });
+    
+    handleClose();
+  }
+
+  return (
+    <>
+      <Button
+        onClick={handleShow}
+        type="button"
+        data-toggle="modal"
+        className="w-100 btn btn-danger mx-md-2  mb-5 mt-5 "
+      >
+        <i className="fa fa-solid fa-plus pr-3 pl-3 text-white"> </i>
+      </Button>
+
+      <Modal size="xl" show={show} onHide={handleClose}>
+        <Form onSubmit={handleSubmit}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+              <Form.Group
+                className="mb-3 "
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Judul</Form.Label>
+                <Form.Control
+                  type="text"
+                  autoFocus
+                  name="title"
+                  value={inputThread.title}
+                  onChange={handleChange}
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-3 "
+                controlId="exampleForm.ControlInput2"
+              >
+                <Form.Label>Penulis</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="writer"
+                  value={inputThread.writer}
+                  onChange={handleChange}
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-3 "
+                controlId="exampleForm.ControlInput3"
+              >
+                <Form.Label>Tanggal</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="date"
+                  value={inputThread.date}
+                  onChange={handleChange}
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Tentang Buku</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  name="description"
+                  value={inputThread.description}
+                  onChange={handleChange}
+                />
+              </Form.Group>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Modal.Footer>
+        </Form>
+      </Modal>
+    </>
+  );
+};
+
