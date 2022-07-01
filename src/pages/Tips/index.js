@@ -1,10 +1,19 @@
-import React from "react";
+import { useState } from "react";
 import "../../sass/pages/_about.scss";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import tipsData from "../../utils/tips.json";
 
 function Tips() {
+  const [tips, setTips] = useState(tipsData);
+
+  function handleSearch(e) {
+    const filterTips = tipsData.filter(tips => {
+      return tips.judul.toLowerCase().includes(e.target.value.toLowerCase())
+    })
+    setTips(filterTips);
+  }
+
   return (
     <section className="padding-y-xxl position-relative  pt-3 pb-5 z-index-1">
       <Container className=" max-width-adaptive-sm position-relative z-index-2">
@@ -21,26 +30,27 @@ function Tips() {
           </div>
         </div>
         <div className="row  col-lg-8 col-12 mx-lg-auto mx-0 pt-3  mb-5">
-          <form className="d-flex">
+          <div className="d-flex">
             <input
               className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
+              onChange={handleSearch}
             />
-            <button
+            {/* <button
               className="btn btn-search text-white bg-success"
               type="submit"
             >
               Search
-            </button>
-          </form>
+            </button> */}
+          </div>
         </div>
       </Container>
 
       <div className="container">
         <div className="row row-cols-1 row-cols-md-3 g-4">
-          {tipsData.map((tips) => (
+          {tips.map((tips) => (
             <div className="col" key={tips.slug}>
               <Link
                 to={"/tips/" + tips.slug}
