@@ -69,7 +69,7 @@ function Login() {
                 type="email"
                 className="form-control"
                 id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                aria-label="input-email"
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
@@ -83,6 +83,7 @@ function Login() {
                 type={passwordType}
                 className="form-control"
                 id="exampleInputPassword1"
+                aria-label="input-password"
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
