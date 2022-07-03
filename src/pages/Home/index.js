@@ -30,17 +30,11 @@ function Home() {
       },
       {
         breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+        settings: 'unslick',
       },
       {
         breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+        settings: 'unslick',
       },
     ],
   };
@@ -155,7 +149,7 @@ function Home() {
           </Row>
 
           <Row>
-            <Col className="px-0">
+            <Col>
               <Tabs
                 variant="pills"
                 defaultActiveKey="news"
