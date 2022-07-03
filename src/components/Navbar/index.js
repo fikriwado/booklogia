@@ -33,7 +33,7 @@ function Navbar() {
           <NavbarBootstrap.Toggle aria-controls="basic-navbar-nav" />
           <NavbarBootstrap.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link to="/" className="nav-link ms-2 me-3">
+              <Link to="/" className="nav-link ms-md-2 me-3">
                 Home
               </Link>
               <Link to="/tips" className="nav-link me-3">
