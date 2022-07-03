@@ -33,7 +33,7 @@ function Navbar() {
           <NavbarBootstrap.Toggle aria-controls="basic-navbar-nav" />
           <NavbarBootstrap.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link to="/" className="nav-link ms-2 me-3">
+              <Link to="/" className="nav-link ms-lg-2 me-3">
                 Home
               </Link>
               <Link to="/tips" className="nav-link me-3">
@@ -60,16 +60,16 @@ function Navbar() {
                 </>
               ) : (
                 <>
-                  <Link to="/login" className="me-2">
-                    <Button variant="outline-light" className="px-4 py-2">
+                  <Link to="/login" className="me-lg-2 w-100 w-lg-auto mb-2 mb-lg-0">
+                    <Button variant="outline-light" className="px-lg-4 py-lg-2 w-100 w-lg-auto">
                       Login
                     </Button>
                   </Link>
 
-                  <span className="nav-link me-2">or</span>
+                  <span className="nav-link me-2 d-none d-lg-inline-block">or</span>
 
-                  <Link to="/register">
-                    <Button variant="orange" className="px-4 py-2 text-light">
+                  <Link to="/register" className="w-100 w-lg-auto">
+                    <Button variant="orange" className="px-lg-4 py-lg-2 w-100 w-lg-auto text-light">
                       Register
                     </Button>
                   </Link>
