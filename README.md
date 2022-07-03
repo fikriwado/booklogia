@@ -6,3 +6,20 @@ Booklogia adalah website / forum untuk berbagi pengalaman mengenai buku, sehingg
 
 ## Mampir Ke Website
 Untuk melihat hasilnya bisa mampir di [Booklogia](https://booklogia.vercel.app).
+
+### Login User
+
+"email": "zeldaababil01@gmail.com"
+"password": "12345"
+
+"email": "fikri@gmail.com"
+"password": "12345"
+
+"email": "fahmi@gmail.com"
+"password": "12345"
+
+"email": "syaeful@gmail.com"
+"password": "12345"
+
+"email": "kevin@gmail.com"
+"password": "12345"
