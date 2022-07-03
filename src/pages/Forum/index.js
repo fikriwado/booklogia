@@ -1,9 +1,8 @@
-import { React, useEffect } from "react";
+import { React } from "react";
 import "../../sass/pages/_forum.scss";
 import { Col, Container, Row, Button, Modal, Form } from "react-bootstrap";
 import Desainzero from "../../assets/images/Forum/Desainzero.png";
 import User from "../../assets/images/Forum/User.png";
-import dataThreads from "../../utils/threads.json";
 import { useState } from "react";
 import Search from "../../components/Search";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,7 +10,7 @@ import { setThreads } from "../../redux/threadsSlice";
 
 function Forum() {
   const { threads } = useSelector((state) => state.threads);
-  
+
   return (
     <div>
       <Col className="banner-blog-parent ">
@@ -20,13 +19,18 @@ function Forum() {
             md={9}
             className="w-100 d-flex justify-content-center pt-5 mt-5 pb-5 mb-5"
           >
-            <Col xs={11} md={4} className="text-center">
-              <h1> Dirodi Entertaining </h1> <h1> "Blog" </h1>
+            <Col xs={11} md={5} className="text-center">
+              <h1>
+                <b> Temukan Referensi </b>
+              </h1>
+              <h1>
+                <b> "Buku" </b>
+              </h1>
               <p>
-                dirodi entertaining blog dirodi
+                Anda dapat menemukan beberapa buku
                 <span>
                   <br />
-                  entertaing birodi blog
+                  booklogia adalah solusi anda
                 </span>
               </p>
               <div className="d-flex justify-content-center align-items-center">
@@ -86,46 +90,49 @@ function Forum() {
       <Col md={12} className="pageabout-3 bg-light pt-3">
         <Container className="pb-5">
           <Row className="row row-cols-1 row-cols-md-3 g-4 pb-4">
-            {threads.slice().sort((a, b) => b.id - a.id).map((thread) => (
-              <Col key={thread.id}>
-                <img
-                  className="img-round"
-                  src={Desainzero}
-                  alt=""
-                  width="100%"
-                />
+            {threads
+              .slice()
+              .sort((a, b) => b.id - a.id)
+              .map((thread) => (
+                <Col key={thread.id}>
+                  <img
+                    className="img-round"
+                    src={Desainzero}
+                    alt=""
+                    width="100%"
+                  />
 
-                <div className="d-flex align-items-center pt-3">
-                  <div>
-                    <h4>{thread.judul}</h4>
-                    <p className="mt-3 mb-4">
-                      <span className="fw-medium"> </span>
-                      {thread.story}
-                      <span className="fa-solid fa-arrow-right-long"></span>
-                    </p>
-                    <div className="d-flex ">
-                      <img
-                        src={User}
-                        className="bg-secondary rounded"
-                        alt=""
-                        width="12%"
-                      />
-                      <Container className=" d-flex align-items-center ml-2">
-                        <div>
-                          <h6>
-                            By: {thread.penulis}
-                            <br />
-                            <span className="text-sub-blog">
-                              {thread.tanggal}
-                            </span>
-                          </h6>
-                        </div>
-                      </Container>
+                  <div className="d-flex align-items-center pt-3">
+                    <div>
+                      <h4>{thread.judul}</h4>
+                      <p className="mt-3 mb-4">
+                        <span className="fw-medium"> </span>
+                        {thread.story}
+                        <span className="fa-solid fa-arrow-right-long"></span>
+                      </p>
+                      <div className="d-flex ">
+                        <img
+                          src={User}
+                          className="bg-secondary rounded"
+                          alt=""
+                          width="12%"
+                        />
+                        <Container className=" d-flex align-items-center ml-2">
+                          <div>
+                            <h6>
+                              By: {thread.penulis}
+                              <br />
+                              <span className="text-sub-blog">
+                                {thread.tanggal}
+                              </span>
+                            </h6>
+                          </div>
+                        </Container>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Col>
-            ))}
+                </Col>
+              ))}
           </Row>
         </Container>
       </Col>
@@ -140,17 +147,17 @@ const Example = () => {
   const { threads } = useSelector((state) => state.threads);
   const [show, setShow] = useState(false);
   const [inputThread, setInputThread] = useState({
-      title: '',
-      writer: '',
-      date: '',
-      description: '',
+    title: "",
+    writer: "",
+    date: "",
+    description: "",
   });
-  
+
   const dispatch = useDispatch();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInputThread({ ...inputThread, [name]: value });
@@ -158,37 +165,38 @@ const Example = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let lastId = threads[threads.length-1].id;
+    let lastId = threads[threads.length - 1].id;
 
     const newThread = {
-      "judul": inputThread.title,
-      "id": ++lastId,
-      "fotobuku": "../../assets/images/Forum/Desainzero.png",
-      "deskripsi": inputThread.description,
-      "story": "Buku ini menjadi salah satu buku yang paling laris di antara beberapa buku terkait self improvemen",
-      "penulis": inputThread.writer,
-      "tanggal": inputThread.date,
-      "like": 0,
-      "id_user": 5,
-      "edit": 0,
-      "delete": 0,
-      "createAt": null,
-      "editAt": null,
-      "deleteAt": null,
-      "komen": []
-    }
+      judul: inputThread.title,
+      id: ++lastId,
+      fotobuku: "../../assets/images/Forum/Desainzero.png",
+      deskripsi: inputThread.description,
+      story:
+        "Buku ini menjadi salah satu buku yang paling laris di antara beberapa buku terkait self improvemen",
+      penulis: inputThread.writer,
+      tanggal: inputThread.date,
+      like: 0,
+      id_user: 5,
+      edit: 0,
+      delete: 0,
+      createAt: null,
+      editAt: null,
+      deleteAt: null,
+      komen: [],
+    };
 
     dispatch(setThreads(newThread));
-    
+
     setInputThread({
-      title: '',
-      writer: '',
-      date: '',
-      description: '',
+      title: "",
+      writer: "",
+      date: "",
+      description: "",
     });
-    
+
     handleClose();
-  }
+  };
 
   return (
     <>
@@ -207,56 +215,47 @@ const Example = () => {
             <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-              <Form.Group
-                className="mb-3 "
-                controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label>Judul</Form.Label>
-                <Form.Control
-                  type="text"
-                  autoFocus
-                  name="title"
-                  value={inputThread.title}
-                  onChange={handleChange}
-                />
-              </Form.Group>
-              <Form.Group
-                className="mb-3 "
-                controlId="exampleForm.ControlInput2"
-              >
-                <Form.Label>Penulis</Form.Label>
-                <Form.Control
-                  type="text"
-                  name="writer"
-                  value={inputThread.writer}
-                  onChange={handleChange}
-                />
-              </Form.Group>
-              <Form.Group
-                className="mb-3 "
-                controlId="exampleForm.ControlInput3"
-              >
-                <Form.Label>Tanggal</Form.Label>
-                <Form.Control
-                  type="text"
-                  name="date"
-                  value={inputThread.date}
-                  onChange={handleChange}
-                />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
-                <Form.Label>Tentang Buku</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={3}
-                  name="description"
-                  value={inputThread.description}
-                  onChange={handleChange}
-                />
-              </Form.Group>
+            <Form.Group className="mb-3 " controlId="exampleForm.ControlInput1">
+              <Form.Label>Judul</Form.Label>
+              <Form.Control
+                type="text"
+                autoFocus
+                name="title"
+                value={inputThread.title}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3 " controlId="exampleForm.ControlInput2">
+              <Form.Label>Penulis</Form.Label>
+              <Form.Control
+                type="text"
+                name="writer"
+                value={inputThread.writer}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3 " controlId="exampleForm.ControlInput3">
+              <Form.Label>Tanggal</Form.Label>
+              <Form.Control
+                type="text"
+                name="date"
+                value={inputThread.date}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>Tentang Buku</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                name="description"
+                value={inputThread.description}
+                onChange={handleChange}
+              />
+            </Form.Group>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" type="submit">
@@ -268,4 +267,3 @@ const Example = () => {
     </>
   );
 };
-
