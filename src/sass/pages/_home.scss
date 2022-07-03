@@ -16,7 +16,10 @@
             color: $white;
             background-color: #F4A641;
             border-radius: 0;
-            min-width: 100px;
+
+            @media (min-width: 768px) {
+                min-width: 100px;
+            }
 
             &.active {
                 background-color: #FB9108;
