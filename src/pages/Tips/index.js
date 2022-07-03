@@ -8,9 +8,9 @@ function Tips() {
   const [tips, setTips] = useState(tipsData);
 
   function handleSearch(e) {
-    const filterTips = tipsData.filter(tips => {
-      return tips.judul.toLowerCase().includes(e.target.value.toLowerCase())
-    })
+    const filterTips = tipsData.filter((tips) => {
+      return tips.judul.toLowerCase().includes(e.target.value.toLowerCase());
+    });
     setTips(filterTips);
   }
 
