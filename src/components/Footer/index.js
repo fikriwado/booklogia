@@ -99,13 +99,11 @@ function Footer() {
 
         <Row className='align-items-center'>
           <Col md={6} className='text-center text-md-start'>
-            {/* ini hasil displaynya ngga ada spasi antara copyright sama nama web kamu, tolong dikasih spasi */}
-            <span>&copy; 2022 Copyright:</span> 
+            <span>&copy; 2022 Copyright:</span>
             <a
               className='text-white text-decoration-none'
               href='https://google.com/'
             >
-              {/* tolong bagian ini dibikin terlihat bisa diklik, misal underline, yg skrg spt text pada umumnya. user ngga tau ini bisa diklik, atau di remove aja linknya sekalian  */}
               BookLogia
             </a>
           </Col>
