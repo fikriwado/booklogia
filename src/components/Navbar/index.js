@@ -13,7 +13,7 @@ import { useDispatch } from "react-redux";
 import { logout } from "../../redux/authSlice";
 
 function Navbar() {
-  const { isAuthorized, user } = useSelector((state) => state.auth);
+  let { isAuthorized, user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   return (
