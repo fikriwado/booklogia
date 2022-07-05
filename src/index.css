@@ -11,3 +11,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* ini sptnya ngga perlu lagi karna sudah ada app.scss bisa didelete, ada redundant jg di pemakaian fonts */
