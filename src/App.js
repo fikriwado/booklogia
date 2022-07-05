@@ -1,15 +1,15 @@
-import "./App.scss";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Tips from "./pages/Tips";
-import Forum from "./pages/Forum";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Artikel from "./pages/Tips/Detail";
+import './App.scss';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Tips from './pages/Tips';
+import Forum from './pages/Forum';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Artikel from './pages/Tips/Detail';
 
 function App() {
   return (
