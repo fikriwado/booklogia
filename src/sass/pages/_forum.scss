@@ -91,6 +91,15 @@
   justify-content: center;
 }
 
+.comment-btn-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 90px;
+  justify-content: start;
+}
+
 .comment-img-inside {
   width: 50px;
   height: 50px;
@@ -123,11 +132,12 @@
 .comment-btn {
   background-color: #14c38e;
   color: #f4f5f7;
-  margin-left: 95px;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 10px;
@@ -205,4 +215,14 @@
   align-content: center;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.col-comment-inside {
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }

@@ -86,7 +86,7 @@ function Thread() {
             <div className="comment-div">
               <textarea className="comment-input"></textarea>
             </div>
-            <div>
+            <div className="comment-btn-div">
               <button className="comment-btn">Submit</button>
             </div>
           </Card>
@@ -144,50 +144,54 @@ function Thread() {
                 >
                   <p>{komen.komentar}</p>
                 </div>
-                <div
-                  className="comment-like"
-                  style={{
-                    display: "flex",
-                    justifyContent: "right",
-                    paddingLeft: "90px",
-                    paddingRight: "90px",
-                  }}
-                >
-                  <span className="label">{komen.like} Likes</span>
+                <Row style={{ display: "flex", justifyContent: "end" }}>
+                  <Col className="col-comment-inside">
+                    <div
+                      className="comment-like"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        marginLeft: "30px",
+                        marginRight: "30px",
+                      }}
+                    >
+                      <span className="label">{komen.like} Likes</span>
 
-                  <button
-                    className="comment-btn"
-                    style={{ backgroundColor: "#25546F" }}
-                  >
-                    <i
-                      className="fa fa-thumbs-up pr-3 pl-3 text-white"
-                      style={{ marginRight: "6px" }}
-                    ></i>
-                    Like
-                  </button>
+                      <button
+                        className="comment-btn"
+                        style={{ backgroundColor: "#25546F" }}
+                      >
+                        <i
+                          className="fa fa-thumbs-up pr-3 pl-3 text-white"
+                          style={{ marginRight: "6px" }}
+                        ></i>
+                        Like
+                      </button>
 
-                  <button
-                    className="comment-btn"
-                    style={{ backgroundColor: "#25546F" }}
-                  >
-                    <i
-                      className="fa fa-message pr-3 pl-3 text-white"
-                      style={{ marginRight: "6px" }}
-                    ></i>
-                    Comment
-                  </button>
+                      <button
+                        className="comment-btn"
+                        style={{ backgroundColor: "#25546F" }}
+                      >
+                        <i
+                          className="fa fa-message pr-3 pl-3 text-white"
+                          style={{ marginRight: "6px" }}
+                        ></i>
+                        Comment
+                      </button>
 
-                  <button
-                    className="comment-btn"
-                    style={{ backgroundColor: "#25546F" }}
-                  >
-                    <i
-                      className="fa fa-trash pr-3 pl-3 text-white"
-                      style={{ marginRight: "6px" }}
-                    ></i>
-                    Delete
-                  </button>
-                </div>
+                      <button
+                        className="comment-btn"
+                        style={{ backgroundColor: "#25546F" }}
+                      >
+                        <i
+                          className="fa fa-trash pr-3 pl-3 text-white"
+                          style={{ marginRight: "6px" }}
+                        ></i>
+                        Delete
+                      </button>
+                    </div>
+                  </Col>
+                </Row>
               </Card>
               {komen.komen_lagi.length !== 0 ? (
                 <Card
@@ -209,7 +213,7 @@ function Thread() {
                                 dataUser.find((user) => {
                                   return user.id === komen_lagi.id_user;
                                 }).nama
-                              }   
+                              }
                               <br />
                             </h5>
                           </div>
