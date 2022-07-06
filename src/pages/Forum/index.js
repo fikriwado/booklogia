@@ -1,12 +1,13 @@
 import { React } from "react";
-import "../../sass/pages/_forum.scss";
 import { Col, Container, Row, Button, Modal, Form } from "react-bootstrap";
-import Desainzero from "../../assets/images/Forum/Desainzero.png";
-import User from "../../assets/images/Forum/User.png";
 import { useState } from "react";
-import Search from "../../components/Search";
 import { useDispatch, useSelector } from "react-redux";
 import { setThreads } from "../../redux/threadsSlice";
+import { Link } from "react-router-dom";
+import "../../sass/pages/_forum.scss";
+import Desainzero from "../../assets/images/Forum/Desainzero.png";
+import User from "../../assets/images/Forum/User.png";
+import Search from "../../components/Search";
 
 function Forum() {
   const { threads } = useSelector((state) => state.threads);
@@ -94,43 +95,48 @@ function Forum() {
               .slice()
               .sort((a, b) => b.id - a.id)
               .map((thread) => (
-                <Col key={thread.id}>
-                  <img
-                    className="img-round"
-                    src={Desainzero}
-                    alt=""
-                    width="100%"
-                  />
+                <Col className="col" key={thread.slug}>
+                  <Link
+                    to={"/thread/" + thread.slug}
+                    className="text-decoration-none text-dark"
+                  >
+                    <img
+                      className="img-round"
+                      src={Desainzero}
+                      alt=""
+                      width="100%"
+                    />
 
-                  <div className="d-flex align-items-center pt-3">
-                    <div>
-                      <h4>{thread.judul}</h4>
-                      <p className="mt-3 mb-4">
-                        <span className="fw-medium"> </span>
-                        {thread.story}
-                        <span className="fa-solid fa-arrow-right-long"></span>
-                      </p>
-                      <div className="d-flex ">
-                        <img
-                          src={User}
-                          className="bg-secondary rounded"
-                          alt=""
-                          width="12%"
-                        />
-                        <Container className=" d-flex align-items-center ml-2">
-                          <div>
-                            <h6>
-                              By: {thread.penulis}
-                              <br />
-                              <span className="text-sub-blog">
-                                {thread.tanggal}
-                              </span>
-                            </h6>
-                          </div>
-                        </Container>
+                    <div className="d-flex align-items-center pt-3">
+                      <div>
+                        <h4>{thread.judul}</h4>
+                        <p className="mt-3 mb-4">
+                          <span className="fw-medium"> </span>
+                          {thread.story}
+                          <span className="fa-solid fa-arrow-right-long"></span>
+                        </p>
+                        <div className="d-flex ">
+                          <img
+                            src={User}
+                            className="bg-secondary rounded"
+                            alt=""
+                            width="12%"
+                          />
+                          <Container className=" d-flex align-items-center ml-2">
+                            <div>
+                              <h6>
+                                By: {thread.penulis}
+                                <br />
+                                <span className="text-sub-blog">
+                                  {thread.tanggal}
+                                </span>
+                              </h6>
+                            </div>
+                          </Container>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </Col>
               ))}
           </Row>
