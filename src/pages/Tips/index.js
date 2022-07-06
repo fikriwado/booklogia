@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useState } from 'react';
 import '../../sass/pages/_about.scss';
 import { Container } from 'react-bootstrap';

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Col, Container, Row } from 'react-bootstrap';
 import heroImage from '../../assets/images/hero.png';
 import iconlinkedin from '../../assets/images/Lingkedin Icon.svg';
@@ -64,7 +63,7 @@ function Register() {
         <Container className="py-5 my-3">
             <Row className="align-items-center">
                 <Col md={6} xl={6} className="mx-auto">
-                    <h1 className="fw-bold">Let's Join With Us and</h1>
+                    <h1 className="fw-bold">Let&apos;s Join With Us and</h1>
                     <h1 className="fw-bold">Make Your Own Reading Buddy !</h1>
                     <form className="form-login">
                         <div className="form-group">
