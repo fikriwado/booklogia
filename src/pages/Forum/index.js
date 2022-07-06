@@ -12,6 +12,14 @@ import Search from "../../components/Search";
 function Forum() {
   const { threads } = useSelector((state) => state.threads);
 
+  const arraylike = [];
+  for (let i = 0; i < threads.length; i++) {
+    const element = threads[i];
+    arraylike.push(element.like);
+  }
+  const max = Math.max(...arraylike);
+
+  const threadLikes = threads.filter((thread) => thread.like === max);
   return (
     <div>
       <Col className="banner-blog-parent ">
@@ -46,46 +54,48 @@ function Forum() {
       </Col>
 
       <Container>
-        <Row>
-          <Col className="col-sm  flex-center w-100 d-flex justify-content-center mt-4 mb-3">
-            <img
-              className="img-fluid img-round"
-              src={Desainzero}
-              alt=""
-              width="100%"
-            />
-          </Col>
-
-          <div className="col-sm d-flex align-items-center">
-            <Col className="title-inside">
-              <h1 className="">
-                How to Choose Bicycle For Spring In Australia Shopping Center?
-              </h1>
-              <p className="mt-3 mb-4">
-                <span className="fw-medium">Booklogia </span> menyediakan banyak
-                jasa yang dapat di pilih sesuai yang di butuhkan konsumen. Jika
-                anda ingin meneruskan bisa klik I'm Order...
-                <span className="fa-solid fa-arrow-right-long"></span>
-              </p>
-              <div className="d-flex ">
-                <img
-                  src={User}
-                  className="bg-secondary rounded"
-                  alt=""
-                  width="12%"
-                />
-                <Container className=" d-flex align-items-center ml-2">
-                  <div>
-                    <h6>
-                      By: Cristiano Ronaldo <br />
-                      <span className="text-sub-blog">16 June 2022</span>
-                    </h6>
-                  </div>
-                </Container>
-              </div>
+        <Link
+          to={"/thread/" + threadLikes[0].slug}
+          className="text-decoration-none text-dark"
+        >
+          <Row key={threadLikes[0].slug}>
+            <Col className="col-sm  flex-center w-100 d-flex justify-content-center mt-4 mb-3">
+              <img
+                className="img-fluid img-round"
+                src={Desainzero}
+                alt=""
+                width="100%"
+              />
             </Col>
-          </div>
-        </Row>
+            <div className="col-sm d-flex align-items-center">
+              <Col className="title-inside">
+                <h1 className="">{threadLikes[0].judul}</h1>
+                <p className="mt-3 mb-4">
+                  <span className="fw-medium"> </span> {threadLikes[0].story}
+                  <span className="fa-solid fa-arrow-right-long"></span>
+                </p>
+                <div className="d-flex ">
+                  <img
+                    src={User}
+                    className="bg-secondary rounded"
+                    alt=""
+                    width="12%"
+                  />
+                  <Container className=" d-flex align-items-center ml-2">
+                    <div>
+                      <h6>
+                        By: {threadLikes[0].penulis} <br />
+                        <span className="text-sub-blog">
+                          {threadLikes[0].tanggal}
+                        </span>
+                      </h6>
+                    </div>
+                  </Container>
+                </div>
+              </Col>
+            </div>
+          </Row>
+        </Link>
       </Container>
 
       <Col md={12} className="pageabout-3 bg-light pt-3">

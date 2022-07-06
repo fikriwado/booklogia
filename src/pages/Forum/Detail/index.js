@@ -90,31 +90,6 @@ function Thread() {
               <button className="comment-btn">Submit</button>
             </div>
           </Card>
-          <Row className="row-search-comment">
-            <div className="search-comment">
-              <Col className="search-col mr-2">
-                <Col className="w-100 h-100 d-flex justify-content-center align-items-center ">
-                  <form
-                    action="/action_page.php"
-                    className="d-flex align-items-center form-container"
-                  >
-                    <button
-                      type="button"
-                      className="btn btn-primary mx-md-2 button-search-comment mb-5 mt-5"
-                    >
-                      <i className="fa fa-search pr-3 pl-3 text-white"> </i>
-                    </button>
-                    <input
-                      type="text"
-                      placeholder="Find a something ....."
-                      name="search "
-                      className="search-input-comment p-2 mr-5 text-white"
-                    />
-                  </form>
-                </Col>
-              </Col>
-            </div>
-          </Row>
           {threadSelected.komens.map((komen) => (
             <>
               <Card className="comment-container mt-3">
