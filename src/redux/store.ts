@@ -9,5 +9,6 @@ const store = configureStore({
     }
 });
 
+// eslint-disable-next-line
 export type TRootState = ReturnType<typeof store.getState>;
 export default store;
