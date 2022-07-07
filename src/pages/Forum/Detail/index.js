@@ -124,11 +124,14 @@ function Thread() {
                                             className="comment-like"
                                             style={{
                                                 display: 'flex',
-                                                justifyContent: 'space-between',
-                                                marginLeft: '30px',
-                                                marginRight: '30px'
+                                                justifyContent: 'space-between'
                                             }}>
-                                            <span className="label">{komen.like} Likes</span>
+                                            <span className="label">
+                                                {komen.like}
+                                                <i
+                                                    className="fa fa-thumbs-up pr-3 pl-3 text-white"
+                                                    style={{ marginLeft: '6px' }}></i>
+                                            </span>
 
                                             <button
                                                 className="comment-btn"
