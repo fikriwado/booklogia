@@ -27,6 +27,16 @@ footer .subscribe .form-control {
     color: #343a40;
 }
 
+footer .footer-link {
+    color: $light;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+        color: rgb(189, 187, 206);
+    }
+}
+
 @media only screen and (max-width: 768px) {
     footer .icon-media-footer {
         font-size: 100%;

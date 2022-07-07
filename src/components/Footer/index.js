@@ -18,22 +18,22 @@ function Footer() {
                         <h5 className="text-uppercase mb-4 font-weight-bold">Popular</h5>
                         <ul className="list-unstyled">
                             <li className="mb-3">
-                                <a href="#" className="text-light text-decoration-none">
+                                <a href="#" className="footer-link">
                                     Becoming by Michelle Obama
                                 </a>
                             </li>
                             <li className="mb-3">
-                                <a href="#" className="text-light text-decoration-none">
+                                <a href="#" className="footer-link">
                                     Dear Tomorrow
                                 </a>
                             </li>
                             <li className="mb-3">
-                                <a href="#" className="text-light text-decoration-none">
+                                <a href="#" className="footer-link">
                                     Merdeka Sejak Hati
                                 </a>
                             </li>
                             <li className="mb-3">
-                                <a href="#" className="text-light text-decoration-none">
+                                <a href="#" className="footer-link">
                                     A Wrinkle in Time
                                 </a>
                             </li>
@@ -57,19 +57,19 @@ function Footer() {
                         <h5 className="text-uppercase mb-4 font-weight-bold">Contact</h5>
                         <ul className="list-unstyled">
                             <li className="mb-3">
-                                <a href="#" className="text-light text-decoration-none">
+                                <a href="#" className="footer-link">
                                     <i className="fas fa-home mr-3 text-white"></i>{' '}
                                     <span>Indonesia</span>
                                 </a>
                             </li>
                             <li className="mb-3">
-                                <a href="#" className="text-light text-decoration-none">
+                                <a href="#" className="footer-link">
                                     <i className="fas fa-envelope mr-3 text-white"></i>{' '}
                                     <span className=" m-lg-1"> booklogia@gmail.com </span>
                                 </a>
                             </li>
                             <li className="mb-3">
-                                <a href="#" className="text-light text-decoration-none">
+                                <a href="#" className="footer-link">
                                     <i className="fas fa-phone mr-3 text-white"></i>{' '}
                                     <span className=" m-lg-1"> +6282131715623 </span>
                                 </a>
@@ -97,34 +97,38 @@ function Footer() {
 
                 <Row className="align-items-center">
                     <Col md={6} className="text-center text-md-start">
-                        {/* ini hasil displaynya ngga ada spasi antara copyright sama nama web kamu, tolong dikasih spasi */}
-                        <span>&copy; 2022 Copyright:</span>
-                        <a className="text-white text-decoration-none" href="https://google.com/">
-                            {/* tolong bagian ini dibikin terlihat bisa diklik, misal underline, yg skrg spt text pada umumnya. user ngga tau ini bisa diklik, atau di remove aja linknya sekalian  */}
+                        <span>&copy; 2022 Copyright | </span>
+                        <a className="footer-link" href="https://google.com/">
                             BookLogia
                         </a>
                     </Col>
 
                     <Col md={6} className="text-center text-md-end">
                         <a
-                            className="btn m-1 text-white"
+                            className="m-1 footer-link ps-3"
                             role="button"
                             href="https://www.instagram.com/">
                             <i className="fab fa-instagram  icon-media-footer"></i>
                         </a>
 
                         <a
-                            className="btn m-1 text-white"
+                            className="m-1 footer-link ps-3"
                             role="button"
                             href="https://www.facebook.com/">
                             <i className="fab fa-facebook-f icon-media-footer"></i>
                         </a>
 
-                        <a className="btn m-1 text-white" role="button" href="https://twitter.com/">
+                        <a
+                            className="m-1 footer-link ps-3"
+                            role="button"
+                            href="https://twitter.com/">
                             <i className="fab fa-twitter icon-media-footer"></i>
                         </a>
 
-                        <a className="btn m-1 text-white" role="button" href="https://google.com/">
+                        <a
+                            className="m-1 footer-link ps-3"
+                            role="button"
+                            href="https://google.com/">
                             <i className="fab fa-google icon-media-footer"></i>
                         </a>
                     </Col>
