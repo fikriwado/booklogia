@@ -29,7 +29,7 @@ function Navbar() {
                             <Link to="/tips" className="nav-link me-3">
                                 Tips
                             </Link>
-                            <Link to="/forum" className="nav-link me-3">
+                            <Link to="/thread" className="nav-link me-3">
                                 Forum
                             </Link>
                         </Nav>

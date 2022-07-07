@@ -29,10 +29,12 @@ const Hero = () => {
                                 yang ingin mencari bacaan diwaktu senggang mereka.
                             </p>
 
-                            <Link to="/" className="btn btn-success text-white px-4 py-2 me-2">
+                            <Link
+                                to="/thread"
+                                className="btn btn-success text-white px-4 py-2 me-2">
                                 Get Started
                             </Link>
-                            <Link to="/" className="btn btn-danger text-white px-4 py-2">
+                            <Link to="/tips" className="btn btn-danger text-white px-4 py-2">
                                 Reading
                             </Link>
                         </div>
