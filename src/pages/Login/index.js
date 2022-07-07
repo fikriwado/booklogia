@@ -5,11 +5,7 @@ import { useDispatch } from 'react-redux';
 import userdata from '../../utils/users.json';
 import { toast } from 'react-toastify';
 import { login } from '../../redux/authSlice';
-import iconfb from '../../assets/images/Facebook Icon.svg';
-import icongithub from '../../assets/images/Github Icon.svg';
-import icongoogle from '../../assets/images/Google Icon.svg';
 import heroImage from '../../assets/images/hero.png';
-import iconlinkedin from '../../assets/images/Lingkedin Icon.svg';
 import '../../sass/pages/_login.scss';
 
 function Login() {
@@ -104,15 +100,6 @@ function Login() {
                             onClick={handleLogin}
                         />
                     </form>
-                    <div className="sign-option my-5">
-                        <h6 className="fw-bold">Or sign in using :</h6>
-                        <div className="icon-sign-option my-3">
-                            <img src={iconlinkedin} className="icon-option mx-2" alt=""></img>
-                            <img src={icongoogle} className="icon-option mx-2" alt=""></img>
-                            <img src={iconfb} className="icon-option mx-2" alt=""></img>
-                            <img src={icongithub} className="icon-option mx-2" alt=""></img>
-                        </div>
-                    </div>
                 </Col>
                 <Col md={6} xl={6} className="mx-auto">
                     <img src={heroImage} className="img-fluid" alt="" />

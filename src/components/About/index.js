@@ -33,7 +33,7 @@ const About = () => {
                                 <img src={aboutPhotosImage} className="img-fluid" alt="" />
                             </div>
 
-                            <Link to="/" className="btn btn-success text-white px-4 py-2">
+                            <Link to="/register" className="btn btn-success text-white px-4 py-2">
                                 Get Started
                             </Link>
                         </div>

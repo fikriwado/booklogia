@@ -1,10 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import heroImage from '../../assets/images/hero.png';
-import iconlinkedin from '../../assets/images/Lingkedin Icon.svg';
-import icongoogle from '../../assets/images/Google Icon.svg';
-import iconfb from '../../assets/images/Facebook Icon.svg';
-import icongithub from '../../assets/images/Github Icon.svg';
 import { login } from '../../redux/authSlice';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
@@ -126,24 +122,11 @@ function Register() {
                             Term’s of Service & Privacy Policy
                         </p>
                     </form>
-                    <div className="sign-option my-1">
-                        <h6 className="fw-bold">Or sign up using :</h6>
-                        <div className="icon-sign-option my-3">
-                            <img src={iconlinkedin} className="icon-option mx-2" alt=""></img>
-                            <img src={icongoogle} className="icon-option mx-2" alt=""></img>
-                            <img src={iconfb} className="icon-option mx-2" alt=""></img>
-                            <img src={icongithub} className="icon-option mx-2" alt=""></img>
-                        </div>
-                    </div>
                 </Col>
                 <Col md={6} xl={6} className="mx-auto">
                     <img src={heroImage} className="img-fluid" alt="" />
                 </Col>
             </Row>{' '}
-            {/* <Button className='btn-login' as={Col} variant='primary'>
-        Button #1
-      </Button>
-      <h1>Ini adalah Login!</h1> <button>ini button</button> */}
         </Container>
     );
 }
