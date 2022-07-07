@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nama": "Cristiano Ronaldo",
+        "foto": "1.png",
+        "bintang": 5,
+        "penilaian": "Web ini sungguh menarik, aku bisa tahu buku-buku menarik setelah mengetahui ulasan dari para pengguna lain dan web ini sangat bermanfaat."
+    },
+    {
+        "id": 2,
+        "nama": "Ainsley Amanda",
+        "foto": "2.png",
+        "bintang": 5,
+        "penilaian": "Aku sangat suka novel romance yang happy ending, ulasan orang-orang sangat membantuku mencari novel yang aku suka."
+    },
+    {
+        "id": 3,
+        "nama": "Agatha Yuda",
+        "foto": "3.png",
+        "bintang": 5,
+        "penilaian": "Orang-orang disini sangat supportive, mereka dengan senang hati memberikan rekomendasi buku yang menarik."
+    }
+]

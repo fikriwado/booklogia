@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import profileRating1 from '../../assets/images/rating-section/1.png';
-import profileRating2 from '../../assets/images/rating-section/2.png';
-import profileRating3 from '../../assets/images/rating-section/3.png';
+import ratingsData from '../../utils/ratings.json';
 
 const Rating = () => {
     return (
@@ -19,73 +17,35 @@ const Rating = () => {
                 </Row>
 
                 <Row>
-                    <Col lg={4} className="mb-3 mb-lg-0">
-                        <Card className="rounded-0 bg-light border-light h-100 py-3">
-                            <Card.Body>
-                                <img src={profileRating1} className="img-fluid mb-3" alt="" />
+                    {ratingsData.map((rating) => (
+                        <Col lg={4} className="mb-3 mb-lg-0" key={rating.id}>
+                            <Card className="rounded-0 bg-light border-light h-100 py-3">
+                                <Card.Body>
+                                    <img
+                                        src={
+                                            window.location.origin +
+                                            '/assets/images/ratings/' +
+                                            rating.foto
+                                        }
+                                        className="img-fluid mb-3"
+                                        alt=""
+                                    />
 
-                                <Card.Text className="fw-bold mb-2">Cristiano Ronaldo</Card.Text>
+                                    <Card.Text className="fw-bold mb-2">{rating.nama}</Card.Text>
 
-                                <div className="mb-2">
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                </div>
+                                    <div className="mb-2">
+                                        {Array.from(Array(rating.bintang), (e, i) => {
+                                            return (
+                                                <i className="fas fa-star text-warning" key={i}></i>
+                                            );
+                                        })}
+                                    </div>
 
-                                <Card.Text>
-                                    Web ini sungguh menarik, aku bisa tahu buku-buku menarik setelah
-                                    mengetahui ulasan dari para pengguna lain dan web ini sangat
-                                    bermanfaat.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col lg={4} className="mb-3 mb-lg-0">
-                        <Card className="rounded-0 bg-light border-light h-100 py-3">
-                            <Card.Body>
-                                <img src={profileRating2} className="img-fluid mb-3" alt="" />
-
-                                <Card.Text className="fw-bold mb-2">Ainsley Amanda</Card.Text>
-
-                                <div className="mb-2">
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                </div>
-
-                                <Card.Text>
-                                    Aku sangat suka novel romance yang happy ending, ulasan
-                                    orang-orang sangat membantuku mencari novel yang aku suka.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col lg={4} className="mb-3 mb-lg-0">
-                        <Card className="rounded-0 bg-light border-light h-100 py-3">
-                            <Card.Body>
-                                <img src={profileRating3} className="img-fluid mb-3" alt="" />
-
-                                <Card.Text className="fw-bold mb-2">Agatha Yuda</Card.Text>
-
-                                <div className="mb-2">
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning"></i>
-                                </div>
-
-                                <Card.Text>
-                                    Orang-orang disini sangat supportive, mereka dengan senang hati
-                                    memberikan rekomendasi buku yang menarik.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                                    <Card.Text>{rating.penilaian}</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    ))}
                 </Row>
             </Container>
         </section>
