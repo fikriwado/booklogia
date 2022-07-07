@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import '../../sass/pages/_about.scss';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -44,7 +43,6 @@ function Tips() {
             >
               Search
             </button> */}
-                        {/* delete unused code */}
                     </div>
                 </div>
             </Container>

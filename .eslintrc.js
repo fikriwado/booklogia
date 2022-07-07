@@ -24,6 +24,7 @@ module.exports = {
     ],
     rules: {
         'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Use our .prettierrc file as source
-        'prefer-const': ['error']
+        'prefer-const': ['error'],
+        '@typescript-eslint/no-unused-vars': 'off'
     }
 };

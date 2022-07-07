@@ -3,9 +3,8 @@ import { useParams } from 'react-router-dom';
 import tipsData from '../../../utils/tips.json';
 
 function Artikel() {
-    const params = useParams(); // semua var yang tidak akan diassign lg sebaiknya pakai const
+    const params = useParams();
     const tipsSelected = tipsData.find((tips) => {
-        // bisa di improve pakai useMemo, https://reactjs.org/docs/hooks-reference.html#usememo
         return tips.slug === params.slug;
     });
     return (
@@ -70,7 +69,6 @@ function Artikel() {
                         placeat.
                     </p>
 
-                    {/* delete unused code */}
                     {/* <p className="text-break">
             Seringkali infrastruktur yang luas yang mendasari peradaban industri
             mengalami transformasi yang dramatis. Tetapi perubahan seperti itu
